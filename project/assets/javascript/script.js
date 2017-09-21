@@ -2,9 +2,12 @@ $(document).ready(function(){
 
 $(document).scroll(function() { 
     if($(window).scrollTop() !== 0) {
-      $("#header").css('opacity', 1);
+        $("#header").css('background-color', 'white');
+        console.log("vliza v if-a");
     }else{
-        $("header").css('opacity', 0.5); 
+        $("#header").css('background-color', 'transparent');
+        console.log("Vliza v else");
+       
     }
  });
 });
