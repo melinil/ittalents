@@ -1,3 +1,40 @@
-.body{
-    background-image: url("../images/background.jpg");
-}
+    
+    body{
+        background-image: url("../images/background.jpg");
+    }
+
+    header{
+        background-color: white;
+        height: 67px;
+        position: ;
+        z-index: 100;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .navbar navbar-default{
+       
+    }
+
+    #logo{
+        height: 200px;
+        margin-top: -65px;
+        margin-left: 40px;
+        float: left;
+
+    }
+
+    .nav_button{
+        float: right; 
+        position: absolute;
+
+    }
+
+    #phone  {
+        width: 40px;
+        float: left;
+        position: absolute;
+        right:25em;
+        
+    }
+
