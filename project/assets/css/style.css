@@ -3,13 +3,22 @@
         background-image: url("../images/background.jpg");
     }
 
-    header{
+    #header_content{
         background-color: white;
         height: 67px;
         z-index: 100;
         position: fixed;
         width: 100%;
-        opacity: 0.5;
+        opacity: 0.85;
+    }
+    div span {
+        float: right;
+        margin: 15px;
+        font-size: 1.7em;
+    }
+    div button{
+        float: right;
+         margin: 10px;
     }
 
     .navbar navbar-default{
@@ -35,7 +44,7 @@
         float: left;
         position: absolute;
         right:25em;
-        
+        margin: 10px;
     }
 
 #spaceB{
