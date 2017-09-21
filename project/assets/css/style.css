@@ -48,3 +48,34 @@
     #spaceB{
         height: 67px;
     }
+
+    footer{
+        background-color: white;
+        height: 120px;
+    }
+ 
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 30em;
+        border: 0 none grey;
+    }
+    
+    li {
+        float: left;
+        border:none;
+    }
+    
+    li a {
+        display: block;
+        color: gray;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #botFooter{
+        float:right;
+        padding-right: 40em;
+    }
