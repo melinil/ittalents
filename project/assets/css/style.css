@@ -6,8 +6,8 @@
     header{
         background-color: white;
         height: 67px;
-        position: ;
         z-index: 100;
+        position: fixed;
         width: 100%;
         opacity: 0.5;
     }
@@ -38,3 +38,6 @@
         
     }
 
+#spaceB{
+    height: 90px;
+}
