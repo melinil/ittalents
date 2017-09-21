@@ -1,28 +1,26 @@
     
     body{
         background-image: url("../images/background.jpg");
+        margin-left: 1px;
     }
 
     #header_content{
-        background-color: white;
+        background-color: transparent;
         height: 67px;
         z-index: 100;
         position: fixed;
         width: 100%;
-        opacity: 0.90;
+        
     }
     div span {
         float: right;
         margin: 15px;
         font-size: 1.7em;
     }
+
     div button{
         float: right;
          margin: 10px;
-    }
-
-    .navbar navbar-default{
-       
     }
 
     #logo{
@@ -47,6 +45,6 @@
         margin: 10px;
     }
 
-#spaceB{
-    height: 67px;
-}
+    #spaceB{
+        height: 67px;
+    }
