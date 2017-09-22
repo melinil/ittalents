@@ -5,7 +5,7 @@
     }
 
     #header_content{
-        background-color: transparent;
+        background-color: white;
         height: 67px;
         z-index: 100;
         position: fixed;
@@ -108,4 +108,13 @@
         height: 500px;
         position: relative;
         margin: auto;
+    }
+
+   
+    #navigationBar{
+        background-color:rgba(142, 45, 13, 0.5);
+        border: 0px solid white;
+    }
+    #navList{
+        margin-left: 23em;
     }

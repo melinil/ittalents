@@ -1,12 +1,6 @@
 $(document).ready(function () {
-
-    $(document).scroll(function () {
-        if ($(window).scrollTop() !== 0) {
-            $("#header_content").css('background-color', 'white');
-        } else {
-            $("#header_content").css('background-color', 'transparent');
-        }
-    });
+    $("#terms").hide();
+    $("#mapPage").hide();
 
     $('#loginButton').on("click", function () {
         $('#myModal').modal('toggle');
@@ -27,15 +21,32 @@ $(document).ready(function () {
         $(".pages").hide();
     });
 
-    $("#deals").on("click",function(){
-       $.getJSON("products.json", function(data){
-           var items=[];
-           $.each(data,function(i,item){
-               items.push(item.name + " , "+ item.description);
-           });
-           $("#res").html(items.join('<br/>'));
-       })
+    $("#termsAndCond").on("click", function () {
+        $(".pages").hide();
+        $("#terms").show();
+    });
+
+    $("#location").on("click", function () {
+        $(".pages").hide();
+        $("#mapPage").show();
+    });
+
+    $("#contactUs").on("click", function () {
+        $(".pages").hide();
+        $("#terms").show();
+    });
+
+    $("#deals").on("click", function () {
+        $.getJSON("products.json", function (data) {
+            var items = [];
+            $.each(data, function (i, item) {
+                items.push(item.name + " , " + item.description);
+            });
+            $("#res").html(items.join('<br/>'));
+        })
     })
+
+
 });
 
 
