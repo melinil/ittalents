@@ -31,12 +31,6 @@
 
     }
 
-    .nav_button{
-        float: right; 
-        position: absolute;
-
-    }
-
     #phone  {
         width: 40px;
         float: left;
@@ -62,7 +56,7 @@
         border: 0 none grey;
     }
     
-    li {
+    .fListItem {
         float: left;
         border:none;
     }
@@ -78,4 +72,20 @@
     #botFooter{
         float:right;
         padding-right: 40em;
+    }
+
+    #myCarousel{
+        padding-bottom: 20px;
+    }
+
+
+
+    #pizzaPage{
+        border: 2px solid blue;
+    }
+
+    .modal-content{
+        height: 300px;
+        width:900px;
+        padding: 3em;
     }
