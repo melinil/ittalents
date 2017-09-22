@@ -16,16 +16,29 @@ $(document).ready(function () {
 
     $('#registerButton').on("click", function () {
         $('#myModal2').modal('toggle');
-
-
     });
 
+    $(".nav navbar-nav").ready(function () {
+        $("nav").hide();
+    });
 
+    $("#menuButton").on("click", function () {
+        $("nav").show();
+        $(".pages").hide();
+    });
 
-
-
-
+    $("#deals").on("click",function(){
+       $.getJSON("products.json", function(data){
+           var items=[];
+           $.each(data,function(i,item){
+               items.push(item.name + " , "+ item.description);
+           });
+           $("#res").html(items.join('<br/>'));
+       })
+    })
 });
+
+
 
 
 function myMap() {
@@ -42,3 +55,4 @@ function myMap() {
         title: 'Pizza is here!'
     });
 }
+

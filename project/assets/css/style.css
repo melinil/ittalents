@@ -67,7 +67,13 @@
         color: gray;
         text-align: center;
         padding: 14px 16px;
-        text-decoration: none;
+        /*text-decoration: none;*/
+        font-weight: bold;
+    }
+    
+    #deals{
+        background-color: #B92E3B;
+        border-radius: 15px;
     }
 
     #botFooter{
@@ -78,8 +84,6 @@
     #myCarousel{
         padding-bottom: 20px;
     }
-
-
 
     #pizzaPage{
         border: 2px solid blue;
