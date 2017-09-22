@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="assets/javascript/script.js"></script>
+
+
 </head>
 
 <body>
@@ -21,12 +23,13 @@
             <img src="assets/images/logo.png" alt="logo for pizza website" id="logo">
             <img src="assets/images/phone.png" alt="phone icon" id="phone">
             <button type="button" class="btn btn-default" class="nav_button">Menu</button>
-            <button type="button" class="btn btn-primary" class="nav_button" data-toggle="modal" data-target="#myModal">Order Now</button>
+            <button type="button" id="loginButton" class="btn btn-primary nav_button">Log In</button>
+            <button type="button" id="registerButton" class="btn btn-primary nav_button">Register</button>
             <span>0899156575</span>
         </div>
-        <div id="BG"></div>
     </header>
     <div id="spaceB"></div>
+
     <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">DEALS</a></li>
@@ -70,64 +73,87 @@
             </a>
             </div>
         </div>
-
-        <div class="row">
-            <!-- По подобие на сайта на доминос сложи, моля те 3 оферти след като си готова с писането им. -->
-            <div class="col-md-4"><img src="http://flash.tarotaro.org/blog/wp-content/uploads/2009/12/long.png" alt=""></div>
-            <div class="col-md-4"><img src="http://flash.tarotaro.org/blog/wp-content/uploads/2009/12/long.png" alt=""></div>
-            <div class="col-md-4"><img src="http://flash.tarotaro.org/blog/wp-content/uploads/2009/12/long.png" alt=""></div>
-        </div>
-
-        <div class="row">
-
-            <div class="    "><img src="http://flash.tarotaro.org/blog/wp-content/uploads/2009/12/long.png" alt=""></div>
-            <div class="col-md-4"><img src="http://flash.tarotaro.org/blog/wp-content/uploads/2009/12/long.png" alt=""></div>
-            <div class="col-md-4"><img src="http://flash.tarotaro.org/blog/wp-content/uploads/2009/12/long.png" alt=""></div>
-        </div>
     </div>
 
 
     <div class="pages" id="login-register">
-
-        <!-- Modal -->
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <form>
-                        <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" id="pwd">
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox"> Remember me</label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                <div class="modal-content" id="login">
+                    <form id="logReg">
+                        <h1>Log In</h1>
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                        <button type="submit" class="btn btn-default">Log In</button>
                     </form>
                 </div>
-
             </div>
         </div>
 
 
 
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" id="register">
+                    <form id="reg">
+                        <h1>Register</h1>
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-row" id="email">
+                        <label for="phone">Phone number:</label>
+                        <input type="text" class="form-row" id="phone">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-row" id="pwd">
+                        <button class="btn btn-default">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
-    <div class="pages"></div>
 
+
+    <div class="pages" id="menuPage"></div>
+
+
+
+
+    <div class="pages" id="mapPage">
+        <div id="map"></div>
+    </div>
+
+
+
+
+    <div class="pages" id="contactForm"></div>
+
+
+    <div class="pages" id="terms">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque suscipit harum dolore mollitia esse, molestias minus perferendis
+            enim maiores. Quae quidem quam quod vel cumque placeat quibusdam ipsa minus ducimus. Maiores tempore itaque voluptas
+            error harum. Repudiandae amet unde nostrum libero nulla tenetur quisquam sit. Nobis praesentium doloremque et.
+            Nisi unde quaerat quae voluptatibus architecto tempora iure eveniet nesciunt enim? Quod ipsum porro molestiae
+            nulla itaque maxime deleniti odit voluptate laboriosam? Mollitia dolore ex blanditiis itaque sapiente harum,
+            perferendis consectetur dolores vel, quod atque porro cupiditate iste impedit recusandae fugit. Delectus perferendis
+            consectetur consequatur asperiores cupiditate! Reiciendis quidem quaerat maxime possimus sint. Iusto, perferendis.
+            Sequi soluta consectetur est corporis voluptas explicabo reprehenderit laborum, culpa quasi, sapiente dignissimos
+            possimus! Rerum, iste! Aliquid soluta labore ipsa fugiat voluptatem, optio voluptas aliquam ex, porro, architecto
+            error molestias esse excepturi vel fuga dolores tempora velit sed minima! Ut et nihil exercitationem eum quos
+            neque. Sapiente dolorum quasi accusamus in quibusdam, consequatur corrupti distinctio impedit illum perspiciatis
+            dolores, veritatis itaque adipisci ad tempore ullam reiciendis veniam quae omnis quia maxime optio delectus esse
+            saepe? Aperiam. Necessitatibus deleniti quo corporis eum pariatur aliquam totam rem debitis. Nisi placeat iste,
+            ratione perspiciatis ab harum accusamus sit maiores enim delectus excepturi explicabo, ducimus molestias nam?
+            Nemo, asperiores excepturi. Natus corporis sunt cupiditate error deserunt, recusandae commodi eos alias debitis
+            reiciendis nam inventore, consectetur possimus harum voluptatibus consequuntur pariatur iure eius, sequi in.
+            Iure maiores quas vero obcaecati culpa. Porro, voluptatum perspiciatis illum quidem laudantium animi blanditiis
+            nulla nam. Temporibus quo pariatur necessitatibus dolorem porro tempora esse expedita at nesciunt, dolore aliquam,
+            magni possimus quos a. Quos, facilis laboriosam. Consequatur eos qui ratione minus soluta officia voluptatibus
+            nam nulla, totam veritatis aliquam odit corrupti quo! Ea libero tenetur excepturi itaque in amet provident tempora
+            quidem perferendis! Quia, dicta quaerat?
+        </p>
+    </div>
 
 
     <footer>
@@ -147,6 +173,8 @@
             </ul>
         </div>
     </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiS_hGGw613WE6F0oKKAkB6ZgsQIcBxTM&callback=myMap"></script>
+
 </body>
 
 </html>

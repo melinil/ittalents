@@ -36,7 +36,8 @@
         float: left;
         position: absolute;
         right:25em;
-        margin: 10px;
+        margin-right: 80px;
+        margin-top: 10px;
     }
 
     #spaceB{
@@ -84,8 +85,23 @@
         border: 2px solid blue;
     }
 
-    .modal-content{
-        height: 300px;
+    #logReg{
+        margin:2em;
+        height: 15em;
+    }
+
+    form h1{
+        position: relative;
+        text-align: center;
+    }
+
+    #register{
+        height: 500px;
+    }
+
+    #map{
         width:900px;
-        padding: 3em;
+        height: 500px;
+        position: relative;
+        margin: auto;
     }
