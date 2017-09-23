@@ -1,0 +1,25 @@
+{
+    "pizzas": [
+        {
+            "id": 1,
+            "name": "Margarita",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/pizza1.png"
+        },
+         {
+            "id": 2,
+            "name": "Tropico",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/pizza2.jpg"
+        },
+         {
+            "id": 3,
+            "name": "CAT-arina",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/pizza3.png"
+        }
+    ]
+}

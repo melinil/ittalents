@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="assets/javascript/script.js"></script>
+    <!-- <script src="assets/javascript/script.js"></script> -->
 </head>
 
 <body>
@@ -30,16 +30,16 @@
 
     <nav class="navbar navbar-default" id="navigationBar">
         <ul class="nav navbar-nav" id="navList">
-            <li ><a href="https://www.zamunda.net" id="deals">DEALS</a></li>
-            <li><a href="#">PIZZA</a></li>
+            <li><a href="#" id="deals">DEALS</a></li>
+            <li><a href="#" id='pizzaTab'>PIZZA</a></li>
             <li><a href="">CHICKEN</a></li>
-            <li><a href="#">PASTA</a></li>
+            <li><a href="#" id="pastaTab">PASTA</a></li>
             <li><a href="#">SANDWICHES</a></li>
             <li><a href="#">SAUCES</a></li>
             <li><a href="#">DESERTS</a></li>
             <li><a href="#">DRINKS</a></li>
         </ul>
-        
+
     </nav>
 
     <div class="pages" id="homePage">
@@ -75,45 +75,47 @@
     <div id="res"></div>
 
 
-    <div class="pages" id="login-register">
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg">
-
-                <div class="modal-content" id="login">
-                    <form id="logReg">
-                        <h1>Log In</h1>
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
-                        <button type="submit" class="btn btn-default">Log In</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div id="myModal2" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content" id="register">
-                    <form id="reg">
-                        <h1>Register</h1>
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-row" id="email">
-                        <label for="phone">Phone number:</label>
-                        <input type="text" class="form-row" id="phone">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-row" id="pwd">
-                        <button class="btn btn-default">Register</button>
-                    </form>
-                </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="login">
+                <form id="regForm">
+                    <h1>Log In</h1>
+                    <label for="email">Email address:</label>
+                    <input type="email" class="input-fields" id="email">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="input-fields" id="pwd">
+                    <button type="submit" class="btn btn-default">Log In</button>
+                </form>
             </div>
         </div>
     </div>
 
 
-    <div class="pages" id="menuPage"></div>
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="login">
+                <form action="" id="regForm">
+                    <h1>Register</h1>
+                    <label for="email">Email address:</label>
+                    <input class="input-fields" type="email" id="email">
+                    <label for="pass">Password:</label>
+                    <input class="input-fields" type="password" id="pass">
+                    <label for="rePass">Repeat password:</label>
+                    <input class="input-fields" type="password" id="rePass">
+                    <label for="address">Address for delivery:</label>
+                    <input class="input-fields" type="textarea" id="address">
+                    <input type="checkbox" name="vehicle" value="Bike"> I agree o the terms and conditions.<br>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pages2" id="menuPage">
+        <ul id="daIma"></ul>
+    </div>
 
 
 
@@ -129,30 +131,81 @@
 
 
     <div class="pages" id="terms">
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque suscipit harum dolore mollitia esse, molestias minus perferendis
-            enim maiores. Quae quidem quam quod vel cumque placeat quibusdam ipsa minus ducimus. Maiores tempore itaque voluptas
-            error harum. Repudiandae amet unde nostrum libero nulla tenetur quisquam sit. Nobis praesentium doloremque et.
-            Nisi unde quaerat quae voluptatibus architecto tempora iure eveniet nesciunt enim? Quod ipsum porro molestiae
-            nulla itaque maxime deleniti odit voluptate laboriosam? Mollitia dolore ex blanditiis itaque sapiente harum,
-            perferendis consectetur dolores vel, quod atque porro cupiditate iste impedit recusandae fugit. Delectus perferendis
-            consectetur consequatur asperiores cupiditate! Reiciendis quidem quaerat maxime possimus sint. Iusto, perferendis.
-            Sequi soluta consectetur est corporis voluptas explicabo reprehenderit laborum, culpa quasi, sapiente dignissimos
-            possimus! Rerum, iste! Aliquid soluta labore ipsa fugiat voluptatem, optio voluptas aliquam ex, porro, architecto
-            error molestias esse excepturi vel fuga dolores tempora velit sed minima! Ut et nihil exercitationem eum quos
-            neque. Sapiente dolorum quasi accusamus in quibusdam, consequatur corrupti distinctio impedit illum perspiciatis
-            dolores, veritatis itaque adipisci ad tempore ullam reiciendis veniam quae omnis quia maxime optio delectus esse
-            saepe? Aperiam. Necessitatibus deleniti quo corporis eum pariatur aliquam totam rem debitis. Nisi placeat iste,
-            ratione perspiciatis ab harum accusamus sit maiores enim delectus excepturi explicabo, ducimus molestias nam?
-            Nemo, asperiores excepturi. Natus corporis sunt cupiditate error deserunt, recusandae commodi eos alias debitis
-            reiciendis nam inventore, consectetur possimus harum voluptatibus consequuntur pariatur iure eius, sequi in.
-            Iure maiores quas vero obcaecati culpa. Porro, voluptatum perspiciatis illum quidem laudantium animi blanditiis
-            nulla nam. Temporibus quo pariatur necessitatibus dolorem porro tempora esse expedita at nesciunt, dolore aliquam,
-            magni possimus quos a. Quos, facilis laboriosam. Consequatur eos qui ratione minus soluta officia voluptatibus
-            nam nulla, totam veritatis aliquam odit corrupti quo! Ea libero tenetur excepturi itaque in amet provident tempora
-            quidem perferendis! Quia, dicta quaerat?
-        </p>
+        <div class="tab-content">
+            <h1>Terms and Conditions ("Terms")</h1>
+
+
+            <p>Last updated: September 23, 2017</p>
+
+
+            <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the pizza.td
+                website (the "Service") operated by pizZaTD ("us", "we", or "our").</p>
+
+            <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These
+                Terms apply to all visitors, users and others who access or use the Service.</p>
+
+            <p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the
+                terms then you may not access the Service. Terms &amp; Conditions created by <a href="https://termsfeed.com"
+                    rel="nofollow">TermsFeed</a> for pizZaTD.</p>
+
+
+            <h2>Accounts</h2>
+
+            <p>When you create an account with us, you must provide us information that is accurate, complete, and current at
+                all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination
+                of your account on our Service.</p>
+
+            <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or
+                actions under your password, whether your password is with our Service or a third-party service.
+            </p>
+
+            <p>You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware
+                of any breach of security or unauthorized use of your account.</p>
+
+
+            <h2>Links To Other Web Sites</h2>
+
+            <p>Our Service may contain links to third-party web sites or services that are not owned or controlled by pizZaTD.</p>
+
+            <p>pizZaTD has no control over, and assumes no responsibility for, the content, privacy policies, or practices of
+                any third party web sites or services. You further acknowledge and agree that pizZaTD shall not be responsible
+                or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection
+                with use of or reliance on any such content, goods or services available on or through any such web sites
+                or services.</p>
+
+            <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or
+                services that you visit.</p>
+
+
+
+
+            <h2>Governing Law</h2>
+
+            <p>These Terms shall be governed and construed in accordance with the laws of Bulgaria, without regard to its conflict
+                of law provisions.</p>
+
+            <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
+                If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions
+                of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our
+                Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+
+
+            <h2>Changes</h2>
+
+            <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is
+                material we will try to provide at least 15 days notice prior to any new terms taking effect. What constitutes
+                a material change will be determined at our sole discretion.</p>
+
+            <p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the
+                revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+
+
+            <h2>Contact Us</h2>
+
+            <p>If you have any questions about these Terms, please contact us.</p>
+        </div>
     </div>
+
 
 
     <footer>
@@ -163,8 +216,8 @@
                 <li class="fListItem" id="termsAndCond"><a href="#terms">Terms and conditions</a></li>
             </ul>
         </div>
-        <div>
-            <ul class="list-group" id="botFooter">
+        <div class="list-group">
+            <ul>
                 <li class="fListItem"><a href="http://facebook.com" target="_blank"><img src="assets/images/faceBook.png" alt="FB Logo"></a></li>
                 <li class="fListItem"><a href="http://twitter.com" target="_blank"><img src="assets/images/twitter.png" alt="Twitter Logo"></a></li>
                 <li class="fListItem"><a href="http://www.youtube.com" target="_blank"><img src="assets/images/youtube.png" alt="Youtube Logo"></a></li>
@@ -172,7 +225,7 @@
         </div>
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiS_hGGw613WE6F0oKKAkB6ZgsQIcBxTM&callback=myMap"></script>
-
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
