@@ -33,11 +33,12 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
-            
-
-
-
-
+             var idClicked = e.target.id;
+             if(idClicked== "deals"){
+               deals.array.forEach(function(element) {
+                   $("#products").append("<div><img src='"+element.image+"'><h3>" +element.name+"</h3></div>")
+               }, this);  
+             }
         }
     });
 });
