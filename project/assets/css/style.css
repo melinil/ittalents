@@ -98,7 +98,7 @@
     
     li a {
         display: block;
-        color: white !important;
+        color: #474747 !important;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -106,7 +106,7 @@
     }
     
     #dealTab{
-        background-color: #B92E3B;
+        background-color: #FF4040;
         border-radius: 15px;
     }
 
@@ -144,7 +144,7 @@
 
    
     #navigationBar{
-        background-color:rgba(189, 92, 60, 0.36);
+        background-color:#FEEEDF;
         border: 0px solid white;
         display: none;
         
@@ -232,3 +232,4 @@
     margin-bottom: 2em;
     padding: 1em 2em 1em 2em;
 }
+

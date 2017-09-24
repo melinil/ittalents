@@ -83,8 +83,8 @@ $(document).ready(function () {
                         print(element);
                     });
                 }
-                if (idClicked == "souceTab") {
-                    data.souces.forEach(function (element) {
+                if (idClicked == "sauceTab") {
+                    data.sauces.forEach(function (element) {
                         print(element);
                     });
                 }
