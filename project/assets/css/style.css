@@ -220,10 +220,13 @@
 }
 
 .menu-items{
-    border: 1px groove white;
+    border: 1px solid grey;
     background-color: white;
     border-radius: 20%;
-    font-size: 1em;
     display: inline-block;
-    width: 32%;
+    width: 22%;
+    height: 250px;
+    margin-left: 8em;
+    margin-bottom: 2em;
+    padding: 1em 2em 1em 2em;
 }

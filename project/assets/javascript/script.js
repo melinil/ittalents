@@ -38,50 +38,50 @@ $(document).ready(function () {
                 var idClicked = e.target.id;
                 if (idClicked == "dealTab") {
                     data.deals.forEach(function (element) {
-                        $("#products").append("<div><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
+                        "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
                     data.pizzas.forEach(function (element) {
-                        $("#products").append("<div><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
+                        "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "chickenTab") {
                     data.chicken.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "pastaTab") {
                     data.pasta.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "sandwichTab") {
                     data.sandwiches.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                            "<div> Price:" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "souceTab") {
                     data.souces.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                            "<div>" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "desertTab") {
                     data.deserts.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "drinkTab") {
                     data.drinks.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<span>" + element.price + "</span><button color='green'>CHOOSE</button></div>")
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
             });
