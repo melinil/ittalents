@@ -33,63 +33,52 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
-            data.deals.forEach(function (element) {
-                $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
-                "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
-            });
             $("body").click(function (e) {
                 $("#products").empty();
                 var idClicked = e.target.id;
+                var print = function(element){
+                     $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h2>" + element.name + "</h2>"+
+                        "<div><h3>Price:</h3>"+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                }
                 if (idClicked == "dealTab") {
                     data.deals.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
-                        "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                       print(element);
                     });
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
                     data.pizzas.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
-                        "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                        print(element);
                     });
                 }
                 if (idClicked == "chickenTab") {
                     data.chicken.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                         print(element);
                     });
                 }
                 if (idClicked == "pastaTab") {
                     data.pasta.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                         print(element);
                     });
                 }
                 if (idClicked == "sandwichTab") {
                     data.sandwiches.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div> Price:" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                         print(element);
                     });
                 }
                 if (idClicked == "souceTab") {
                     data.souces.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div>" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                        print(element);
                     });
                 }
                 if (idClicked == "desertTab") {
                     data.deserts.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div>Price:" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                         print(element);
                     });
                 }
                 if (idClicked == "drinkTab") {
                     data.drinks.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                         print(element);
                     });
-                }
-                if (idClicked == "body") {
-                    console.log("Do not touch my body!")
                 }
             });
         }
