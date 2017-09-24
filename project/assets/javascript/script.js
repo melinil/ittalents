@@ -21,7 +21,7 @@ $(document).ready(function () {
             $("#contactForm").show();
         } else if (idClicked == 'logo') {
             location.reload();
-        }else if (idClicked == 'infoButton') {
+        } else if (idClicked == 'infoButton') {
             $(".pages").hide();
             $("#loginButton").hide();
             $("#registerButton").hide();
@@ -33,8 +33,14 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
-            
-
+            $("body").click(function (e) {
+                var idClicked = e.target.id;
+                if (idClicked == "deals") {
+                    data.deals.forEach(function (element) {
+                        $("#products").append("<div><img src='" + element.image + "'><h3>" + element.name + "</h3></div>")
+                    });
+                }
+            });
         }
     });
 });
