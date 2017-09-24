@@ -1,3 +1,16 @@
+function myMap() {
+    var uluru = { lat: 42.664096, lng: 23.287974 };
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+    map.setMapTypeId("roadmap");
+}
 $(document).ready(function () {
 
     $("body").click(function (e) {
@@ -16,6 +29,7 @@ $(document).ready(function () {
         } else if (idClicked == 'location') {
             $(".pages").hide();
             $("#mapPage").show();
+            myMap()
         } else if (idClicked == 'contactUs') {
             $(".pages").hide();
             $("#contactForm").show();
@@ -33,6 +47,13 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
+<<<<<<< HEAD
+            data.deals.forEach(function (element) {
+                $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
+                    "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+            });
+=======
+>>>>>>> 6bd113707f8e02651a1f26cd4be35c79705cfb2e
             $("body").click(function (e) {
                 $("#products").empty();
                 var idClicked = e.target.id;
@@ -42,12 +63,22 @@ $(document).ready(function () {
                 }
                 if (idClicked == "dealTab") {
                     data.deals.forEach(function (element) {
+<<<<<<< HEAD
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+=======
                        print(element);
+>>>>>>> 6bd113707f8e02651a1f26cd4be35c79705cfb2e
                     });
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
                     data.pizzas.forEach(function (element) {
+<<<<<<< HEAD
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+=======
                         print(element);
+>>>>>>> 6bd113707f8e02651a1f26cd4be35c79705cfb2e
                     });
                 }
                 if (idClicked == "chickenTab") {
@@ -80,7 +111,16 @@ $(document).ready(function () {
                          print(element);
                     });
                 }
+<<<<<<< HEAD
+                else {
+                    console.log("Hello!")
+                }
+=======
+>>>>>>> 6bd113707f8e02651a1f26cd4be35c79705cfb2e
             });
         }
     });
+
+
 });
+
