@@ -38,13 +38,13 @@ $(document).ready(function () {
                 var idClicked = e.target.id;
                 if (idClicked == "dealTab") {
                     data.deals.forEach(function (element) {
-                        $("#products").append("<div><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
                         "<span>"+element.price+ "</span><button color='green'>CHOOSE</button></div>")
                     });
                 }
                  if ((idClicked == "pizzaTab") || (idClicked== "menuButton")) {
                     data.pizzas.forEach(function (element) {
-                        $("#products").append("<div><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
                         "<span>"+element.price+ "</span><button color='green'>CHOOSE</button></div>")
                     });
                 }

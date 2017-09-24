@@ -219,11 +219,10 @@
     display: none;
 }
 
-.menu-item{
+.menu-items{
     border: 1px groove white;
     background-color: white;
     border-radius: 20%;
-    font-size: 1em;
     display: inline-block;
     width: 32%;
 }
