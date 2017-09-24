@@ -206,3 +206,7 @@
     height: 70px;
     background-color: rgba(16, 247, 192, 0.09);
 }
+
+#choosePizza{
+    display: none;
+}

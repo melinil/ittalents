@@ -1,0 +1,117 @@
+{
+    "deals": [
+        {
+            "id": 1,
+            "name": "Deal 1",
+            "price": 12,
+            "description": "Take one pizza with one bottle Fanta only for 12$",
+            "image": "assets/images/deal1.png"
+        },
+         {
+            "id": 2,
+            "name": "Deal 2",
+            "price": 12,
+            "description": "Combo",
+            "image": "assets/images/deal2.jpg"
+        },
+         {
+            "id": 3,
+            "name": "Deal 3",
+            "price": 0,
+            "description": "Every second large pizza on half price",
+            "image": "assets/images/deal3.png"
+        }
+    ],
+    "pizzas": [
+        {
+            "id": 1,
+            "name": "Margarita",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/pizza1.png"
+        },
+         {
+            "id": 2,
+            "name": "Tropico",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/pizza2.jpg"
+        },
+         {
+            "id": 3,
+            "name": "CAT-arina",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/pizza3.png"
+        }
+    ],
+    "sandwiches": [
+        {
+            "id": 1,
+            "name": "vkusen",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/pizza1.png"
+        },
+         {
+            "id": 2,
+            "name": "gaden",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/pizza2.jpg"
+        },
+         {
+            "id": 3,
+            "name": "onq tretiq",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/pizza3.png"
+        }
+    ],
+    "chicken": [
+        {
+            "id": 1,
+            "name": "little",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/pizza1.png"
+        },
+         {
+            "id": 2,
+            "name": "big",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/pizza2.jpg"
+        },
+         {
+            "id": 3,
+            "name": "medium",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/pizza3.png"
+        }
+    ],
+    "pasta": [
+        {
+            "id": 1,
+            "name": "kokoshka",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/pizza1.png"
+        },
+         {
+            "id": 2,
+            "name": "riba",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/pizza2.jpg"
+        },
+         {
+            "id": 3,
+            "name": "CAT",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/pizza3.png"
+        }
+    ]
+}

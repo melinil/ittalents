@@ -26,8 +26,13 @@ $(document).ready(function () {
 
     $.ajax({
         type: "POST",
-        url: "pizzas.json",
+        url: "products.json",
         success: function (data) {
+            
+            
+
+
+
         }
     });
 });
