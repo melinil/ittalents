@@ -35,9 +35,6 @@ $(document).ready(function () {
         success: function (data) {
             
 
-
-
-
         }
     });
 });
