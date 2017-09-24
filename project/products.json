@@ -25,83 +25,164 @@
     "pizzas": [
         {
             "id": 1,
-            "name": "Margarita",
+            "name": "American Hot",
             "price": 12,
             "description": "",
-            "image": "assets/images/pizza1.png"
+            "image": "assets/images/americanHotSmall.png"
         },
          {
             "id": 2,
-            "name": "Tropico",
+            "name": "BBQ",
             "price": 16,
             "description": "Pineapple and some stuff",
-            "image": "assets/images/pizza2.jpg"
+            "image": "assets/images/BBQSmall.png"
         },
          {
             "id": 3,
-            "name": "CAT-arina",
+            "name": "Garden",
             "price": 11,
             "description": "Some other stuff that makes you go meow!",
-            "image": "assets/images/pizza3.png"
+            "image": "assets/images/gardenSmall.png"
+        },
+        {
+            "id": 4,
+            "name": "Margarita",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/margaritaSmall.png"
+        },
+        {
+            "id": 5,
+            "name": "New York",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/ntSmall.png"
+        },
+        {
+            "id": 6,
+            "name": "Peperoni",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/peperoniSmall.png"
         }
     ],
     "sandwiches": [
         {
             "id": 1,
-            "name": "vkusen",
+            "name": "BBQ",
             "price": 12,
             "description": "no meat just tomato stuff and stuff... stuff",
-            "image": "assets/images/pizza1.png"
+            "image": "assets/images/bbqS.png"
         },
          {
             "id": 2,
-            "name": "gaden",
+            "name": "Mediter",
             "price": 16,
             "description": "Pineapple and some stuff",
-            "image": "assets/images/pizza2.jpg"
+            "image": "assets/images/mediterS.png"
         },
          {
             "id": 3,
-            "name": "onq tretiq",
+            "name": "Peperoni",
             "price": 11,
             "description": "Some other stuff that makes you go meow!",
-            "image": "assets/images/pizza3.png"
+            "image": "assets/images/peperoniS.png"
         }
     ],
     "chicken": [
         {
             "id": 1,
-            "name": "little",
+            "name": "Buffalo",
             "price": 12,
             "description": "no meat just tomato stuff and stuff... stuff",
-            "image": "assets/images/pizza1.png"
+            "image": "assets/images/buffalo.png"
         },
          {
             "id": 2,
-            "name": "big",
+            "name": "Spicy Buffalo",
             "price": 16,
             "description": "Pineapple and some stuff",
-            "image": "assets/images/pizza2.jpg"
+            "image": "assets/images/buffaloSp.png"
         },
          {
             "id": 3,
-            "name": "medium",
+            "name": "Kickers",
             "price": 11,
             "description": "Some other stuff that makes you go meow!",
-            "image": "assets/images/pizza3.png"
+            "image": "assets/images/lkickers.png"
+        },
+        {
+            "id": 4,
+            "name": "Strippers",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/stripper.png"
         }
     ],
     "pasta": [
         {
             "id": 1,
-            "name": "kokoshka",
+            "name": "Carbonara",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/carbonaraP.png"
+        },
+         {
+            "id": 2,
+            "name": "Napolitana",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/napolitanaP.jpg"
+        },
+         {
+            "id": 3,
+            "name": "Peperoni",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/peperoniP.png"
+        }
+    ],
+    "souces": [
+        {
+            "id": 1,
+            "name": "honey",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/honey.png"
+        },
+         {
+            "id": 2,
+            "name": "garlic",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/garlic.png"
+        },
+         {
+            "id": 3,
+            "name": "BBQ",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/bbq.png"
+        },
+        {
+            "id": 4,
+            "name": "BBQ",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/chilli.png"
+        }
+    ],
+    "deserts": [
+        {
+            "id": 1,
+            "name": "Cake",
             "price": 12,
             "description": "no meat just tomato stuff and stuff... stuff",
             "image": "assets/images/pizza1.png"
         },
          {
             "id": 2,
-            "name": "riba",
+            "name": "Coockes",
             "price": 16,
             "description": "Pineapple and some stuff",
             "image": "assets/images/pizza2.jpg"
@@ -112,6 +193,36 @@
             "price": 11,
             "description": "Some other stuff that makes you go meow!",
             "image": "assets/images/pizza3.png"
+        }
+    ],
+    "drinks": [
+        {
+            "id": 1,
+            "name": "Coca Cola",
+            "price": 12,
+            "description": "no meat just tomato stuff and stuff... stuff",
+            "image": "assets/images/cola.jpg"
+        },
+         {
+            "id": 2,
+            "name": "Fanta",
+            "price": 16,
+            "description": "Pineapple and some stuff",
+            "image": "assets/images/fanta.png"
+        },
+         {
+            "id": 3,
+            "name": "Sprite",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/sprite.png"
+        },
+        {
+            "id": 4,
+            "name": "Water",
+            "price": 11,
+            "description": "Some other stuff that makes you go meow!",
+            "image": "assets/images/water.png"
         }
     ]
 }
