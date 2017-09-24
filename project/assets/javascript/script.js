@@ -1,3 +1,16 @@
+function myMap() {
+    var uluru = { lat: 42.664096, lng: 23.287974 };
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+    map.setMapTypeId("roadmap");
+}
 $(document).ready(function () {
 
     $("body").click(function (e) {
@@ -16,6 +29,7 @@ $(document).ready(function () {
         } else if (idClicked == 'location') {
             $(".pages").hide();
             $("#mapPage").show();
+            myMap()
         } else if (idClicked == 'contactUs') {
             $(".pages").hide();
             $("#contactForm").show();
@@ -34,22 +48,22 @@ $(document).ready(function () {
         url: "products.json",
         success: function (data) {
             data.deals.forEach(function (element) {
-                $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
-                "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
+                    "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
             });
             $("body").click(function (e) {
                 $("#products").empty();
                 var idClicked = e.target.id;
                 if (idClicked == "dealTab") {
                     data.deals.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
-                        "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
                     data.pizzas.forEach(function (element) {
-                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
-                        "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                        $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
+                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "chickenTab") {
@@ -88,10 +102,13 @@ $(document).ready(function () {
                             "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
-                if (idClicked == "body") {
-                    console.log("Do not touch my body!")
+                else {
+                    console.log("Hello!")
                 }
             });
         }
     });
+
+
 });
+
