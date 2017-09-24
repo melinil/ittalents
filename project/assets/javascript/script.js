@@ -33,6 +33,10 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
+            data.deals.forEach(function (element) {
+                $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>"+
+                "<div>Price: "+element.price+ "</div><button class='btn btn-success'>CHOOSE</button></div>")
+            });
             $("body").click(function (e) {
                 $("#products").empty();
                 var idClicked = e.target.id;
@@ -75,7 +79,7 @@ $(document).ready(function () {
                 if (idClicked == "desertTab") {
                     data.deserts.forEach(function (element) {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                            "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                            "<div>Price:" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
                 }
                 if (idClicked == "drinkTab") {
@@ -83,6 +87,9 @@ $(document).ready(function () {
                         $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
                             "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
                     });
+                }
+                if (idClicked == "body") {
+                    console.log("Do not touch my body!")
                 }
             });
         }
