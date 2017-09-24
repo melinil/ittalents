@@ -18,9 +18,10 @@
 <body id="body">
     <header id="header">
         <div id="header_content">
-            <img src="assets/images/logo.png" alt="logo for pizza website" id="logo" >
+            <img src="assets/images/logo.png" alt="logo for pizza website" id="logo">
             <img src="assets/images/phone.png" alt="phone icon" id="phone">
             <button type="button" id="menuButton" class="btn btn-default" class="nav_button">Menu</button>
+            <button type="button" id="infoButton" class="btn btn-primary nav_button">Acoount info</button>
             <button type="button" id="loginButton" class="btn btn-primary nav_button">Log In</button>
             <button type="button" id="registerButton" class="btn btn-primary nav_button">Register</button>
             <span>0899156575</span>
@@ -112,7 +113,7 @@
     </div>
 
     <div id="choosePizza">
-        <div  class="semi-squere">
+        <div class="semi-squere">
             <label for="size">SIZE</label>
             <select id="pizza-size" class="semi-squere" name="size_id">
                 <option > Medium(6 Slices) </option>
@@ -128,7 +129,7 @@
             <h3>TOPPINGS</h3>
             <p>description from json</p>
         </div>
-        <div id="quantity">  
+        <div id="quantity">
             <label for="quantity">QUANTITY</label><br>
             <img src="assets/images/minus.png" alt="">
             <span>1</span>
@@ -136,21 +137,31 @@
         </div>
     </div>
 
-
-
-    <div class="pages2" id="menuPage">
-        <ul id="daIma"></ul>
-    </div>
-
-
-
-
     <div class="pages" id="mapPage">
         <div id="map"></div>
     </div>
 
 
-
+    <div id="accountInfo" class="pages">
+        <form action="" id="regForm">
+            <h1>Account Information</h1>
+            <label for="fName">First Name:</label>
+            <input class="input-fields semi-squere" type="textarea" id="fName">
+            <label for="lName">Last Name:</label>
+            <input class="input-fields semi-squere" type="textarea" id="lName">
+            <label for="email">Email address:</label>
+            <input class="input-fields semi-squere" type="email" id="email">
+            <label for="pass">Old Password:</label>
+            <input class="input-fields semi-squere" type="password" id="pass">
+            <label for="newPass">New Password:</label>
+            <input class="input-fields semi-squere" type="password" id="newPass">
+            <label for="rePass">Repeat password:</label>
+            <input class="input-fields semi-squere" type="password" id="rePass">
+            <label for="address">Address for delivery:</label>
+            <input class="input-fields semi-squere" type="textarea" id="address">
+            <button type="submit" class="btn btn-default">Update info</button>
+        </form>
+    </div>
 
     <div class="pages" id="contactForm">
         <form>
@@ -249,8 +260,8 @@
         <div class="list-group">
             <ul>
                 <li class="fListItem"><a href="#map" id="location">Restaurants</a></li>
-                <li class="fListItem" ><a href="#contact" id="contactUs">Contact us</a></li>
-                <li class="fListItem"><a href="#terms"  id="termsAndCond">Terms and conditions</a></li>
+                <li class="fListItem"><a href="#contact" id="contactUs">Contact us</a></li>
+                <li class="fListItem"><a href="#terms" id="termsAndCond">Terms and conditions</a></li>
             </ul>
         </div>
         <div class="list-group">

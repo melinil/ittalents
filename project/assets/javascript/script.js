@@ -21,6 +21,11 @@ $(document).ready(function () {
             $("#contactForm").show();
         } else if (idClicked == 'logo') {
             location.reload();
+        }else if (idClicked == 'infoButton') {
+            $(".pages").hide();
+            $("#loginButton").hide();
+            $("#registerButton").hide();
+            $("#accountInfo").show();
         }
     });
 
@@ -29,7 +34,7 @@ $(document).ready(function () {
         url: "products.json",
         success: function (data) {
             
-            
+
 
 
 
