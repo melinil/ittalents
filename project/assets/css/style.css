@@ -1,8 +1,11 @@
     
-    body{
+    /* body{
         background-image: url("../images/background.jpg");
-    }
+    } */
 
+    #mapPage{
+        display: none;
+    }
     #header_content{
         background-color: white;
         height: 67px;
@@ -141,6 +144,7 @@
     #navigationBar{
         background-color:rgba(189, 92, 60, 0.36);
         border: 0px solid white;
+        display: none;
         
     }
     #navList{
@@ -167,6 +171,7 @@
    #terms{
        background-color: rgba(142, 45, 13, 0.5);
        color: white;
+       display: none;
    }
 
    .input-fields{
@@ -189,6 +194,7 @@
     background-color: rgba(142, 45, 13, 0.5);
     padding-bottom: 2em;
     padding-top: 2em;
+    display: none;
 }
 
 #message{
