@@ -18,9 +18,10 @@
 <body id="body">
     <header id="header">
         <div id="header_content">
-            <img src="assets/images/logo.png" alt="logo for pizza website" id="logo">
+            <img src="assets/images/logo2.png" alt="logo for pizza website" id="logo">
             <img src="assets/images/phone.png" alt="phone icon" id="phone">
             <button type="button" id="menuButton" class="btn btn-default" class="nav_button">Menu</button>
+            <img id ="cart" src="assets/images/cart.png" alt="">
             <button type="button" id="infoButton" class="btn btn-primary nav_button">Acoount info</button>
             <button type="button" id="loginButton" class="btn btn-primary nav_button">Log In</button>
             <button type="button" id="registerButton" class="btn btn-primary nav_button">Register</button>
@@ -112,14 +113,17 @@
         </div>
     </div>
 
-    <div id="choosePizza">
+    <div id="choosePizza" class="modal fade" role="dialog">
         <div class="semi-squere">
+            <img id="product" alt="">
+            <h1 id="namePr"></h1>
+            <div id="mores">
             <label for="size">SIZE</label>
             <select id="pizza-size" class="semi-squere" name="size_id">
                 <option > Medium(6 Slices) </option>
                 <option selected="selected">Large(8 Slices)</option>
                 <option>Jumbo(12 Slices) </option>
-            </select>
+            </select><br>
             <label for="crust">CRUST</label>
             <select id="crust-type" class="semi-squere" name="size_id">
                 <option selected="selected" >Hand Tossed</option>
@@ -127,13 +131,20 @@
                 <option>Thin crust</option>
             </select>
             <h3>TOPPINGS</h3>
-            <p>description from json</p>
+            <p id="topping"></p>
+            </div>
         </div>
         <div id="quantity">
             <label for="quantity">QUANTITY</label><br>
-            <img src="assets/images/minus.png" alt="">
-            <span>1</span>
-            <img src="assets/images/plus.png" alt="">
+            <button>
+                <img src="assets/images/minus.png" alt="">
+            </button> 
+            <p>1</p>
+            <button>
+                <img src="assets/images/plus.png" alt="">
+            </button>
+            <p id="price"></p>
+            <button id="add">Add</button>
         </div>
     </div>
 

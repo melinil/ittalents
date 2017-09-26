@@ -12,34 +12,59 @@ function myMap() {
     map.setMapTypeId("roadmap");
 }
 $(document).ready(function () {
-
+    $("#choosePizza").hide();
     $("body").click(function (e) {
         var idClicked = e.target.id;
         if (idClicked == 'loginButton') {
             $('#myModal').modal('toggle');
-        } else if (idClicked == 'registerButton') {
+        }
+        if (idClicked == 'registerButton') {
             $('#myModal2').modal('toggle');
-        } else if (idClicked == 'menuButton') {
+        }
+        if (idClicked == 'menuButton') {
             $("nav").show();
             $(".pages").hide();
-        } else if (idClicked == 'termsAndCond') {
+        }
+        if (idClicked == 'termsAndCond') {
             $(".pages").hide();
             $("#terms").show();
             console.log(idClicked);
-        } else if (idClicked == 'location') {
+        }
+        if (idClicked == 'location') {
             $(".pages").hide();
             $("#mapPage").show();
             myMap()
-        } else if (idClicked == 'contactUs') {
+        }
+        if (idClicked == 'contactUs') {
             $(".pages").hide();
             $("#contactForm").show();
-        } else if (idClicked == 'logo') {
+        }
+        if (idClicked == 'logo') {
             location.reload();
-        } else if (idClicked == 'infoButton') {
+        }
+        if (idClicked == 'infoButton') {
             $(".pages").hide();
             $("#loginButton").hide();
             $("#registerButton").hide();
             $("#accountInfo").show();
+        }
+        if (idClicked == 'btn-choose') {
+            $.ajax({
+                type: "POST",
+                url: "products.json",
+                success: function (data) {
+                    $("#choosePizza").modal('toggle');
+                    data.pizzas.find(function (element) {
+                        $("#product").attr("src", element.image);
+                        $("#namePr").text(element.name);
+                        $("#topping").text(element.description);
+                        $("#price").text("Price: "+element.price);
+                    })
+                }
+            });
+            $("#add").on("click", function(){
+                
+            })
         }
     });
 
@@ -47,16 +72,12 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
-            data.deals.forEach(function (element) {
-                $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h3>" + element.name + "</h3>" +
-                    "<div>Price: " + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
-            });
             $("body").click(function (e) {
                 $("#products").empty();
                 var idClicked = e.target.id;
                 var print = function (element) {
                     $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h2>" + element.name + "</h2>" +
-                        "<div><h3>Price:</h3>" + element.price + "</div><button class='btn btn-success'>CHOOSE</button></div>")
+                        "<div><h3>Price:</h3>" + element.price + "</div><button id='btn-choose'class='btn btn-success'>CHOOSE</button></div>")
                 }
                 if (idClicked == "dealTab") {
                     data.deals.forEach(function (element) {
@@ -104,7 +125,5 @@ $(document).ready(function () {
             });
         }
     });
-
-
 });
 
