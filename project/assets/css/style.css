@@ -232,12 +232,23 @@
 #regForm{
     margin: 5em;
 }
+FFF8F0
 
 #contactForm{
-    background-color: rgba(142, 45, 13, 0.5);
+    
     padding-bottom: 2em;
     padding-top: 2em;
     display: none;
+    
+    
+}
+#cForm{
+    background-color: rgba(255, 248, 240, 0.9);
+    width: 90%;
+    margin: auto;
+    height: 400px;
+    padding: 1em;
+    display: none;;
 }
 
 #message{
