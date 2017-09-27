@@ -56,7 +56,7 @@ $(document).ready(function () {
                 url: "products.json",
                 success: function (data) {
                     $("#choosePizza").modal('toggle');
-                    tabName.find(function (element) {
+                    data.pizzas.find(function (element) {
                         $("#product").attr("src", element.image);
                         $("#namePr").text(element.name);
                         $("#topping").text(element.description);
