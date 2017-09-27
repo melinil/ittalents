@@ -195,28 +195,32 @@
        
     }
 
-   #daIma li{
+   /* #daIma li{
        background-color: white;
        float: left;
        margin-left: 2em;
        width: 300px;
 
-   }
+   } */
 
    .menuImage{
        width: 100%;
    }
 
-   #daIma{
-       margin-left: 2em;
-   }
-
    #terms{
-       background-color: rgba(142, 45, 13, 0.5);
-       color: white;
-       display: none;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    display: none;
    }
 
+   .tab-content{
+    background-color: rgba(255, 248, 240, 0.9);
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    display: none;
+
+   }
    .input-fields{
     width: 100%;
     height: 30px;
@@ -248,7 +252,7 @@ FFF8F0
     margin: auto;
     height: 400px;
     padding: 1em;
-    display: none;;
+    display: none;
 }
 
 #message{
@@ -273,11 +277,23 @@ FFF8F0
     border: 1px solid grey;
     background-color: white;
     border-radius: 20%;
-    display: inline-block;
-    width: 22%;
-    height: 250px;
+    float: left;
+    width: 20%;
+    height: 350px;
     margin-left: 8em;
     margin-bottom: 2em;
     padding: 1em 2em 1em 2em;
 }
 
+.menuCenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+#orderButton{
+    width: 100% ;
+    margin: auto !important;
+}
