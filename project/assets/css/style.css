@@ -281,3 +281,6 @@ FFF8F0
     padding: 1em 2em 1em 2em;
 }
 
+#cartContainer{
+    display: none;
+}

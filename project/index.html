@@ -21,7 +21,7 @@
             <img src="assets/images/logo2.png" alt="logo for pizza website" id="logo">
             <img src="assets/images/phone.png" alt="phone icon" id="phone">
             <button type="button" id="menuButton" class="btn btn-default" class="nav_button">Menu</button>
-            <img id ="cart" src="assets/images/cart.png" alt="">
+            <img id="cart" src="assets/images/cart.png" alt="">
             <button type="button" id="infoButton" class="btn btn-primary nav_button">Acoount info</button>
             <button type="button" id="loginButton" class="btn btn-primary nav_button">Log In</button>
             <button type="button" id="registerButton" class="btn btn-primary nav_button">Register</button>
@@ -118,27 +118,27 @@
             <img id="product" alt="">
             <h1 id="namePr"></h1>
             <div id="mores">
-            <label for="size">SIZE</label>
-            <select id="pizza-size" class="semi-squere" name="size_id">
+                <label for="size">SIZE</label>
+                <select id="pizza-size" class="semi-squere" name="size_id">
                 <option > Medium(6 Slices) </option>
                 <option selected="selected">Large(8 Slices)</option>
                 <option>Jumbo(12 Slices) </option>
             </select><br>
-            <label for="crust">CRUST</label>
-            <select id="crust-type" class="semi-squere" name="size_id">
+                <label for="crust">CRUST</label>
+                <select id="crust-type" class="semi-squere" name="size_id">
                 <option selected="selected" >Hand Tossed</option>
                 <option>Italian style</option>
                 <option>Thin crust</option>
             </select>
-            <h3>TOPPINGS</h3>
-            <p id="topping"></p>
+                <h3>TOPPINGS</h3>
+                <p id="topping"></p>
             </div>
         </div>
         <div id="quantity">
             <label for="quantity">QUANTITY</label><br>
             <button>
                 <img src="assets/images/minus.png" alt="">
-            </button> 
+            </button>
             <p>1</p>
             <button>
                 <img src="assets/images/plus.png" alt="">
@@ -155,6 +155,51 @@
     <div id="products">
 
     </div>
+
+    <div id='cartContainer'>
+        <div id='order'>
+            <h2>ORDER CONFIRMATION</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>PRODUCT</th>
+                            <th>QUANTITY</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-default"> Back to menu</button>
+        </div>
+        <div id='discount'>
+            <h2>YOUR COUPONS</h2>
+        </div>
+        <div id='delivery'>
+            <h2>DELIVERY DETAILS</h2>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="login">
+                <form action="" id="onCart">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <div id="accountInfo" class="pages">
         <form action="" id="regForm">
@@ -180,7 +225,9 @@
     <div class="pages" id="contactForm">
         <form id="cForm">
             <h1>Contact us</h1>
-            <p><h3>If you have any questions feel free to use our contact form and we will get back to you as soon as possible.</h3></p>
+            <p>
+                <h3>If you have any questions feel free to use our contact form and we will get back to you as soon as possible.</h3>
+            </p>
             <label for="name">Enter your name:</label>
             <input type="textbox" class="input-fields semi-squere" id="name">
             <label for="email">Email address:</label>
