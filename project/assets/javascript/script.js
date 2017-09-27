@@ -38,6 +38,7 @@ $(document).ready(function () {
         if (idClicked == 'contactUs') {
             $(".pages").hide();
             $("#contactForm").show();
+            $("#cForm").show();
         }
         if (idClicked == 'logo') {
             location.reload();
