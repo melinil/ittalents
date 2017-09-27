@@ -63,7 +63,7 @@ $(document).ready(function () {
                 }
             });
             $("#add").on("click", function(){
-                
+
             })
         }
     });
@@ -74,48 +74,57 @@ $(document).ready(function () {
         success: function (data) {
             $("body").click(function (e) {
                 $("#products").empty();
+                var tabName;
                 var idClicked = e.target.id;
                 var print = function (element) {
                     $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h2>" + element.name + "</h2>" +
                         "<div><h3>Price:</h3>" + element.price + "</div><button id='btn-choose'class='btn btn-success'>CHOOSE</button></div>")
                 }
                 if (idClicked == "dealTab") {
-                    data.deals.forEach(function (element) {
+                    tabName= data.deals;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
-                    data.pizzas.forEach(function (element) {
+                    tabName= data.pizzas;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if (idClicked == "chickenTab") {
-                    data.chicken.forEach(function (element) {
+                    tabName=data.chicken;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if (idClicked == "pastaTab") {
-                    data.pasta.forEach(function (element) {
+                    tabName=data.pasta;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if (idClicked == "sandwichTab") {
-                    data.sandwiches.forEach(function (element) {
+                    tabName=data.sandwiches;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if (idClicked == "sauceTab") {
-                    data.sauces.forEach(function (element) {
+                    tabName= data.sauces;
+                   tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if (idClicked == "desertTab") {
-                    data.deserts.forEach(function (element) {
+                    tabName=data.deserts;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
                 if (idClicked == "drinkTab") {
-                    data.drinks.forEach(function (element) {
+                    tabName=data.drinks;
+                    tabName.forEach(function (element) {
                         print(element);
                     });
                 }
