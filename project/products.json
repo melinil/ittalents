@@ -2,24 +2,24 @@
     "deals": [
         {
             "id": 1,
-            "name": "Deal 1",
-            "price": 12,
-            "description": "Take one pizza with one bottle Fanta only for 12$",
-            "image": "assets/images/deal1.png"
+            "name": "Double or nothing",
+            "price": 0,
+            "description": "Order two pizzas and the the secon one with 50% off.",
+            "image": "assets/images/offer1.png"
         },
          {
             "id": 2,
-            "name": "Deal 2",
-            "price": 12,
-            "description": "Combo",
-            "image": "assets/images/deal2.jpg"
+            "name": "Go big or go home",
+            "price": 0,
+            "description": "Order two large pizzas and get a drink you chose on the house.",
+            "image": "assets/images/offer2.png"
         },
          {
             "id": 3,
-            "name": "Deal 3",
+            "name": "Bring a friend",
             "price": 0,
-            "description": "Every second large pizza on half price",
-            "image": "assets/images/deal3.png"
+            "description": "Take a large pizza and a couple of drinks and participate for some awesome prizes.",
+            "image": "assets/images/offer3.png"
         }
     ],
     "pizzas": [
@@ -27,42 +27,42 @@
             "id": 1,
             "name": "American Hot",
             "price": 12,
-            "description": "",
+            "description": "FOrget italian and go for a hot-hot american goodness.",
             "image": "assets/images/americanHotSmall.png"
         },
          {
             "id": 2,
             "name": "BBQ",
-            "price": 16,
-            "description": "Pineapple and some stuff",
+            "price": 13,
+            "description": "Ribs or pizza- pizza or ribs? Why not both?",
             "image": "assets/images/BBQSmall.png"
         },
          {
             "id": 3,
             "name": "Garden",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 10,
+            "description": "Not really into the meaty stuff? Got you govered",
             "image": "assets/images/gardenSmall.png"
         },
         {
             "id": 4,
             "name": "Margarita",
             "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "description": "Sometimes simple is better.",
             "image": "assets/images/margaritaSmall.png"
         },
         {
             "id": 5,
             "name": "New York",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 15,
+            "description": "Life in the big apple might be fast, but you can chill with some pizza.",
             "image": "assets/images/ntSmall.png"
         },
         {
             "id": 6,
             "name": "Peperoni",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 14,
+            "description": "Spicy classic with some peperoni and weet tomato sauce.",
             "image": "assets/images/peperoniSmall.png"
         }
     ],
@@ -70,22 +70,22 @@
         {
             "id": 1,
             "name": "BBQ",
-            "price": 12,
-            "description": "no meat just tomato stuff and stuff... stuff",
+            "price": 6,
+            "description": "Hot and sweet meaty goodness.",
             "image": "assets/images/bbqS.png"
         },
          {
             "id": 2,
             "name": "Mediter",
-            "price": 16,
-            "description": "Pineapple and some stuff",
+            "price": 5,
+            "description": "Greek atmosphere with some olives, letuces and meditterenian spices.",
             "image": "assets/images/mediterS.png"
         },
          {
             "id": 3,
             "name": "Peperoni",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 5,
+            "description": "The sandwich that will make you feel like home.",
             "image": "assets/images/peperoniS.png"
         }
     ],
@@ -93,29 +93,29 @@
         {
             "id": 1,
             "name": "Buffalo",
-            "price": 12,
-            "description": "no meat just tomato stuff and stuff... stuff",
+            "price": 9,
+            "description": "Old Bill decided to share his secret for the best chicken in the whole wild west.",
             "image": "assets/images/buffalo.png"
         },
          {
             "id": 2,
             "name": "Spicy Buffalo",
-            "price": 16,
-            "description": "Pineapple and some stuff",
+            "price": 10,
+            "description": "With old Bill's permision we spiced up a bit the secret.",
             "image": "assets/images/buffaloSp.png"
         },
          {
             "id": 3,
             "name": "Kickers",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 8,
+            "description": "Kick your senses with our chicken golden nuggets",
             "image": "assets/images/lkickers.png"
         },
         {
-            "id": 4,
+            "id": 8,
             "name": "Strippers",
             "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "description": "We don't talk about that...",
             "image": "assets/images/stripper.png"
         }
     ],
@@ -123,22 +123,22 @@
         {
             "id": 1,
             "name": "Carbonara",
-            "price": 12,
-            "description": "no meat just tomato stuff and stuff... stuff",
+            "price": 7,
+            "description": "The secret is in the white sauce",
             "image": "assets/images/carbonaraP.png"
         },
          {
             "id": 2,
             "name": "Napolitana",
-            "price": 16,
-            "description": "Pineapple and some stuff",
+            "price": 8,
+            "description": "I have no idea, but is good, trust me",
             "image": "assets/images/napolitanaP.png"
         },
          {
             "id": 3,
             "name": "Peperoni",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 6,
+            "description": "Just the way mom used to make it.",
             "image": "assets/images/peperoniP.png"
         }
     ],
@@ -146,83 +146,83 @@
         {
             "id": 1,
             "name": "honey",
-            "price": 12,
-            "description": "no meat just tomato stuff and stuff... stuff",
+            "price": 1,
+            "description": "Buzz- buzz",
             "image": "assets/images/honey.png"
         },
          {
             "id": 2,
             "name": "garlic",
-            "price": 16,
-            "description": "Pineapple and some stuff",
+            "price": 1,
+            "description": "Fresh out of the garden",
             "image": "assets/images/garlic.png"
         },
          {
             "id": 3,
             "name": "BBQ",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "price": 1,
+            "description": "ust try it",
             "image": "assets/images/bbq.png"
         },
         {
             "id": 4,
-            "name": "BBQ",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
+            "name": "Chilli",
+            "price": 1,
+            "description": "Would you like to spice things a bit?",
             "image": "assets/images/chilli.png"
         }
     ],
     "deserts": [
         {
             "id": 1,
-            "name": "Cake",
-            "price": 12,
+            "name": "muffin",
+            "price": 2,
             "description": "no meat just tomato stuff and stuff... stuff",
-            "image": "assets/images/pizza1.png"
+            "image": "assets/images/muffin.png"
         },
          {
             "id": 2,
-            "name": "Coockes",
-            "price": 16,
+            "name": "Pie",
+            "price": 3,
             "description": "Pineapple and some stuff",
-            "image": "assets/images/pizza2.jpg"
+            "image": "assets/images/pai.png"
         },
          {
             "id": 3,
-            "name": "CAT",
-            "price": 11,
+            "name": "Ice-cream",
+            "price": 3,
             "description": "Some other stuff that makes you go meow!",
-            "image": "assets/images/pizza3.png"
+            "image": "assets/images/sladoled.png"
         }
     ],
     "drinks": [
         {
             "id": 1,
             "name": "Coca Cola",
-            "price": 12,
-            "description": "no meat just tomato stuff and stuff... stuff",
-            "image": "assets/images/cola.jpg"
+            "price": 3,
+            "description": "Taste the feeling!",
+            "image": "assets/images/cola.png"
         },
          {
             "id": 2,
             "name": "Fanta",
-            "price": 16,
-            "description": "Pineapple and some stuff",
-            "image": "assets/images/fanta.png"
+            "price": 3,
+            "description": "Different slogan every day",
+            "image": "assets/images/fanta1.png"
         },
          {
             "id": 3,
             "name": "Sprite",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
-            "image": "assets/images/sprite.png"
+            "price": 3,
+            "description": "Better that 7UP!!",
+            "image": "assets/images/sprite1.png"
         },
         {
             "id": 4,
             "name": "Water",
-            "price": 11,
-            "description": "Some other stuff that makes you go meow!",
-            "image": "assets/images/water.png"
+            "price": 2,
+            "description": "Source of life",
+            "image": "assets/images/water1.png"
         }
     ]
 }

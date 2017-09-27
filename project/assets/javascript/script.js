@@ -28,6 +28,7 @@ $(document).ready(function () {
         if (idClicked == 'termsAndCond') {
             $(".pages").hide();
             $("#terms").show();
+            $('.tab-content').show();
             console.log(idClicked);
         }
         if (idClicked == 'location') {
@@ -49,7 +50,7 @@ $(document).ready(function () {
             $("#registerButton").hide();
             $("#accountInfo").show();
         }
-        if (idClicked == 'btn-choose') {
+        if (idClicked == 'orderButton') {
             $.ajax({
                 type: "POST",
                 url: "products.json",
@@ -72,13 +73,17 @@ $(document).ready(function () {
         type: "POST",
         url: "products.json",
         success: function (data) {
+            data.deals.forEach(function (element) {
+                $("#products").append("<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
+                    "<h3 class='menuCenter'>Price:" + element.price + "</h3><button class='btn btn-success menuCenter' id='orderButton'>CHOOSE</button></div>")
+            });
             $("body").click(function (e) {
                 $("#products").empty();
                 var tabName;
                 var idClicked = e.target.id;
                 var print = function (element) {
-                    $("#products").append("<div class='menu-items'><img width='150px' src='" + element.image + "'><h2>" + element.name + "</h2>" +
-                        "<div><h3>Price:</h3>" + element.price + "</div><button id='btn-choose'class='btn btn-success'>CHOOSE</button></div>")
+                    $("#products").append("<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
+                        "<h3 class='menuCenter'>Price:" + element.price + "</h3><button class='btn btn-success' id='orderButton'>CHOOSE</button></div>")
                 }
                 if (idClicked == "dealTab") {
                     tabName = data.deals;
