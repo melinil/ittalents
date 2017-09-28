@@ -26,6 +26,11 @@
         font-size: 1.7em;
     }
 
+    div a{
+        float: right;
+         margin: 10px;
+    }
+
     div button{
         float: right;
          margin: 10px;

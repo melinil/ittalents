@@ -42,7 +42,7 @@ $(document).ready(function () {
             $("#cForm").show();
         }
         if (idClicked == 'logo') {
-            location.reload();
+            window.location.href='index.html';
         }
         if (idClicked == 'infoButton') {
             $(".pages").hide();
