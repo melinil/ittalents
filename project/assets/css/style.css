@@ -75,7 +75,7 @@
     }
 
     
-    #choosePizza{
+    #chooseProduct{
         margin: auto;
         background-color: #FFF8F0;
         border: 1px solid white;
@@ -86,7 +86,7 @@
     }
 
 
-    #choosePizza select {
+    #chooseProduct select {
         border: 0.5px;
         color: black;
         background: transparent;
