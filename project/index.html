@@ -26,7 +26,7 @@
             <!-- <button type="button" id="loginButton" class="btn btn-primary nav_button">Log In</button>
             <button type="button" id="registerButton" class="btn btn-primary nav_button">Register</button> -->
             <a href="login.php" class="btn btn-primary nav_button" id="loginButton">Log In</a>
-            <a href="register.php" class="btn btn-primary nav_button"  id="registerButton">Register</a>
+            <a href="register.php" class="btn btn-primary nav_button" id="registerButton">Register</a>
             <span>0700125</span>
         </div>
     </header>
@@ -35,7 +35,7 @@
     <nav class="navbar navbar-default" id="navigationBar">
         <ul class="nav navbar-nav" id="navList">
             <li><a href="#deals" id="dealTab">DEALS</a></li>
-            <li><a href="#pizza" id='pizzaTab'>PIZZA</a></li>
+            <li><a href="#pizzas" id='pizzaTab'>PIZZA</a></li>
             <li><a href="#chicken" id='chickenTab'>CHICKEN</a></li>
             <li><a href="#pasta" id="pastaTab">PASTA</a></li>
             <li><a href="#sandwiches" id='sandwichTab'>SANDWICHES</a></li>
@@ -115,23 +115,25 @@
         </div>
     </div>
 
-    <div id="choosePizza" class="modal fade" role="dialog">
+    <div id="chooseProduct" class="modal fade" role="dialog">
         <div class="semi-squere">
             <img id="product" alt="">
             <h1 id="namePr"></h1>
             <div id="mores">
-                <label for="size">SIZE</label>
-                <select id="pizza-size" class="semi-squere" name="size_id">
-                <option > Medium(6 Slices) </option>
-                <option selected="selected">Large(8 Slices)</option>
-                <option>Jumbo(12 Slices) </option>
-            </select><br>
-                <label for="crust">CRUST</label>
-                <select id="crust-type" class="semi-squere" name="size_id">
-                <option selected="selected" >Hand Tossed</option>
-                <option>Italian style</option>
-                <option>Thin crust</option>
-            </select>
+                <div id='slice'>
+                        <label for="size">SIZE</label>
+                        <select id="pizza-size" class="semi-squere" name="size_id">
+                    <option > Medium(6 Slices) </option>
+                    <option selected="selected">Large(8 Slices)</option>
+                    <option>Jumbo(12 Slices) </option>
+                </select><br>
+                        <label for="crust">CRUST</label>
+                        <select id="crust-type" class="semi-squere" name="size_id">
+                    <option selected="selected" >Hand Tossed</option>
+                    <option>Italian style</option>
+                    <option>Thin crust</option>
+                </select>
+                </div>
                 <h3>TOPPINGS</h3>
                 <p id="topping"></p>
             </div>

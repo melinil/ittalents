@@ -42,7 +42,7 @@ $(document).ready(function () {
             $("#cForm").show();
         }
         if (idClicked == 'logo') {
-            window.location.href='index.html';
+            window.location.href = 'index.html';
         }
         if (idClicked == 'infoButton') {
             $(".pages").hide();
@@ -55,13 +55,25 @@ $(document).ready(function () {
                 type: "POST",
                 url: "products.json",
                 success: function (data) {
-                    $("#choosePizza").modal('toggle');
-                    data.pizzas.find(function (element) {
-                        $("#product").attr("src", element.image);
-                        $("#namePr").text(element.name);
-                        $("#topping").text(element.description);
-                        $("#price").text("Price: " + element.price);
-                    })
+                    $("#chooseProduct").modal('toggle');
+                    var href = document.location.href;
+                    var pathSegment = href.substr(href.lastIndexOf('#') + 1);
+                    if (pathSegment == 'pizzas') {
+                        data[pathSegment].find(function (element) {
+                            $("#product").attr("src", element.image);
+                            $("#namePr").text(element.name);
+                            $("#topping").text(element.description);
+                            $("#price").text("Price: " + element.price);
+                        })
+                    } else {
+                        $('#slice').hide();
+                        data[pathSegment].find(function (element) {
+                            $("#product").attr("src", element.image);
+                            $("#namePr").text(element.name);
+                            $("#topping").text(element.description);
+                            $("#price").text("Price: " + element.price);
+                        })
+                    }
                 }
             });
             $("#add").on("click", function () {
