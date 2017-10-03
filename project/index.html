@@ -20,11 +20,9 @@
         <div id="header_content">
             <img src="assets/images/logo2.png" alt="logo for pizza website" id="logo">
             <img src="assets/images/phone.png" alt="phone icon" id="phone">
-            <button type="button" id="menuButton" class="btn btn-default" class="nav_button">Menu</button>
+            <a href="#pizzas" id="menuButton" class="btn btn-default nav_button">Menu</a>
             <img id="cart" src="assets/images/cart.png" alt="">
-            <button type="button" id="infoButton" class="btn btn-primary nav_button">Acoount info</button>
-            <!-- <button type="button" id="loginButton" class="btn btn-primary nav_button">Log In</button>
-            <button type="button" id="registerButton" class="btn btn-primary nav_button">Register</button> -->
+            <a href="#accountInfo" id="infoButton" class="btn btn-primary nav_button">Acoount info</a>
             <a href="login.php" class="btn btn-primary nav_button" id="loginButton">Log In</a>
             <a href="register.php" class="btn btn-primary nav_button" id="registerButton">Register</a>
             <span>0700125</span>
@@ -77,43 +75,6 @@
         </div>
     </div>
     <div id="res"></div>
-
-
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content" id="login">
-                <form id="regForm">
-                    <h1>Log In</h1>
-                    <label for="email">Email address:</label>
-                    <input type="email" class="input-fields semi-squere" id="email">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="input-fields semi-squere" id="pwd">
-                    <button type="submit" class="btn btn-default">Log In</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="myModal2" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content" id="login">
-                <form action="" id="regForm">
-                    <h1>Register</h1>
-                    <label for="email">Email address:</label>
-                    <input class="input-fields semi-squere" type="email" id="email">
-                    <label for="pass">Password:</label>
-                    <input class="input-fields semi-squere" type="password" id="pass">
-                    <label for="rePass">Repeat password:</label>
-                    <input class="input-fields semi-squere" type="password" id="rePass">
-                    <label for="address">Address for delivery:</label>
-                    <input class="input-fields semi-squere" type="textarea" id="address">
-                    <input type="checkbox" name="vehicle" value="Bike"> I agree o the terms and conditions.<br>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <div id="chooseProduct" class="modal fade" role="dialog">
         <div class="semi-squere">
@@ -338,7 +299,7 @@
         </div>
     </footer>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiS_hGGw613WE6F0oKKAkB6ZgsQIcBxTM&callback=myMap"></script>
-    <!-- <script src="assets/javascript/script.js"></script> -->
+
 </body>
 
 </html>

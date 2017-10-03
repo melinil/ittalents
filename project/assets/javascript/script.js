@@ -11,9 +11,9 @@ function myMap() {
     });
     map.setMapTypeId("roadmap");
 }
-$(document).ready(function () {
+$(function () {
     $("#choosePizza").hide();
-    $("body").click(function (e) {
+    $("a").click(function (e) {
         var idClicked = e.target.id;
         if (idClicked == 'loginButton') {
             $('#myModal').modal('toggle');
@@ -40,9 +40,6 @@ $(document).ready(function () {
             $(".pages").hide();
             $("#contactForm").show();
             $("#cForm").show();
-        }
-        if (idClicked == 'logo') {
-            window.location.href = 'index.html';
         }
         if (idClicked == 'infoButton') {
             $(".pages").hide();
@@ -76,6 +73,7 @@ $(document).ready(function () {
                     }
                 }
             });
+            console.log(idClicked);
             $("#add").on("click", function () {
 
             })
@@ -87,15 +85,15 @@ $(document).ready(function () {
         success: function (data) {
             data.deals.forEach(function (element) {
                 $("#products").append("<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
-                    "<h3 class='menuCenter'>Price:" + element.price + "</h3><button class='btn btn-success menuCenter' id='orderButton'>CHOOSE</button></div>")
+                    "<h3 class='menuCenter'>Price:" + element.price + "</h3><a class='btn btn-success menuCenter' id='orderButton'>CHOOSE</a></div>")
             });
-            $("body").click(function (e) {
+            $("a").click(function (e) {
                 $("#products").empty();
                 var tabName;
                 var idClicked = e.target.id;
                 var print = function (element) {
                     $("#products").append("<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
-                        "<h3 class='menuCenter'>Price:" + element.price + "</h3><button class='btn btn-success' id='orderButton'>CHOOSE</button></div>")
+                        "<h3 class='menuCenter'>Price:" + element.price + "</h3><a class='btn btn-success' id='orderButton'>CHOOSE</a></div>")
                 }
                 if (idClicked == "dealTab") {
                     tabName = data.deals;
@@ -151,5 +149,12 @@ $(document).ready(function () {
             });
         }
     });
+
+
+    $("#logo").on('click', function () {
+
+        window.location.href = 'index.html';
+    });
+
 });
 
