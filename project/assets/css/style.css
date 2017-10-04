@@ -74,7 +74,18 @@
         
     }
 
-    
+    .popover {
+         max-width: 500px !important;
+         height: 500px !important;;
+         background-color: #FFF8F0;
+         border: 1px solid white;
+         padding: 10px;
+    }   
+
+    .popover-content {
+        width: 500px;
+    }
+
     #chooseProduct{
         margin: auto;
         background-color: #FFF8F0;
@@ -83,8 +94,8 @@
         height: 90%;
         padding: 10px;
         box-sizing: border-box;
+        display: none;
     }
-
 
     #chooseProduct select {
         border: 0.5px;

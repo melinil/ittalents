@@ -12,7 +12,6 @@ function myMap() {
     map.setMapTypeId("roadmap");
 }
 $(function () {
-    $("#choosePizza").hide();
     $("a").click(function (e) {
         var idClicked = e.target.id;
         if (idClicked == 'loginButton') {
@@ -47,37 +46,6 @@ $(function () {
             $("#registerButton").hide();
             $("#accountInfo").show();
         }
-        if (idClicked == 'orderButton') {
-            $.ajax({
-                type: "POST",
-                url: "products.json",
-                success: function (data) {
-                    $("#chooseProduct").modal('toggle');
-                    var href = document.location.href;
-                    var pathSegment = href.substr(href.lastIndexOf('#') + 1);
-                    if (pathSegment == 'pizzas') {
-                        data[pathSegment].find(function (element) {
-                            $("#product").attr("src", element.image);
-                            $("#namePr").text(element.name);
-                            $("#topping").text(element.description);
-                            $("#price").text("Price: " + element.price);
-                        })
-                    } else {
-                        $('#slice').hide();
-                        data[pathSegment].find(function (element) {
-                            $("#product").attr("src", element.image);
-                            $("#namePr").text(element.name);
-                            $("#topping").text(element.description);
-                            $("#price").text("Price: " + element.price);
-                        })
-                    }
-                }
-            });
-            console.log(idClicked);
-            $("#add").on("click", function () {
-
-            })
-        }
     });
     $.ajax({
         type: "POST",
@@ -85,63 +53,72 @@ $(function () {
         success: function (data) {
             data.deals.forEach(function (element) {
                 $("#products").append("<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
-                    "<h3 class='menuCenter'>Price:" + element.price + "</h3><a class='btn btn-success menuCenter' id='orderButton'>CHOOSE</a></div>")
+                    "<h3 class='menuCenter'>Price:" + element.price + "</h3><button class='btn btn-success btn-md' id='orderButton'>CHOOSE</button></div>")
             });
             $("a").click(function (e) {
                 $("#products").empty();
-                var tabName;
                 var idClicked = e.target.id;
-                var print = function (element) {
-                    $("#products").append("<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
-                        "<h3 class='menuCenter'>Price:" + element.price + "</h3><a class='btn btn-success' id='orderButton'>CHOOSE</a></div>")
+                
+                function newChoose (element, on) {
+                    $(on).popover({
+                        title: "<img width='80%' height='40%' src='" + element.image + "'>",
+                        content: "<div id='pr'><h2>" + element.name + "</h2>" +
+                        "<h3>TOPPINGS</h3><p>"+element.description+"</p>"+
+                        "<h3 >Price:" + element.price + "</h3>" +
+                        " <button type='submit' class='add-product-to-basket btn btn-success'>Add</button> </div>",
+                        html: true,
+                        placement: "right"
+                    });
+                    
+                    $(on).on('shown.bs.popover', function () {
+                        $(this).closest('.menu-items').find('.add-product-to-basket').click(function() {
+                             $("#products").hide();
+                            $('#cartContainer').show();
+                        });
+                    });
+
+                    $(on).popover('show');
+                }
+
+                function listMenu(menuItems) {
+                    var html = '';
+
+                    menuItems.forEach(function (element) {
+                        html += "<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
+                        "<h3 class='menuCenter'>Price:" + element.price + "</h3> <button data-id='" + element.id + "' class='open-additional-menu btn btn-success btn-md'>Choose</button></div>"; 
+                    });
+                    
+                    $("#products").html(html);
+                
+                    $('.open-additional-menu').click(function() {
+                        var itemNumber = $(this).data('id');
+
+                        newChoose(menuItems[itemNumber-1], this);
+                    });
                 }
                 if (idClicked == "dealTab") {
-                    tabName = data.deals;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                    listMenu(data.deals);
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
-                    tabName = data.pizzas;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                    listMenu(data.pizzas);
                 }
                 if (idClicked == "chickenTab") {
-                    tabName = data.chicken;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                     listMenu(data.chicken);
                 }
                 if (idClicked == "pastaTab") {
-                    tabName = data.pasta;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                     listMenu(data.pasta);
                 }
                 if (idClicked == "sandwichTab") {
-                    tabName = data.sandwiches;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                     listMenu(data.sandwiches);
                 }
                 if (idClicked == "sauceTab") {
-                    tabName = data.sauces;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                    listMenu(data.sauces);
                 }
                 if (idClicked == "desertTab") {
-                    tabName = data.deserts;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                    listMenu(data.deserts);
                 }
                 if (idClicked == "drinkTab") {
-                    tabName = data.drinks;
-                    tabName.forEach(function (element) {
-                        print(element);
-                    });
+                    listMenu(data.drinks);
                 }
                 else {
                     console.log("Hello!")
