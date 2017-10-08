@@ -9,6 +9,10 @@
         float: right;
     }
 
+    #table td th {
+        border: 1px solid black !important;
+    }
+
     #mapPage{
         display: none;
     }
@@ -290,7 +294,7 @@ FFF8F0
 }
 
 .menu-items{
-    border: 1px solid grey;
+    
     background-color: white;
     border-radius: 20%;
     float: left;
@@ -304,6 +308,11 @@ FFF8F0
 #cartContainer{
     display: none;
 }
+
+#cartContainer > div{
+    margin: 1em;
+}
+
 .menuCenter{
     display: block;
     margin-left: auto;
@@ -312,7 +321,44 @@ FFF8F0
     padding: 5px;
 }
 
-#orderButton{
-    width: 100% ;
-    margin: auto !important;
+#order{
+    width: 65% ;
+    float: left;
+    border: 1px solid grey;
+    background-color:#FFF8F0;
+    float: left;
+}
+
+#order > button{
+    float: left;
+}
+
+#discount{
+    width: 30% ;
+    float: left;
+    border: 1px solid grey;
+    background-color:#FFF8F0;
+}
+
+#discount,h2,p,label,input, button{
+    margin: 10px;
+}
+
+/*div > h2{
+    font-family:Palatino Linotype;
+    color: #0A67A3;
+}*/
+
+/*.red-decoration-title {
+    background-image: url(assets/images/decor_elem_left_red.png), url(assets/images/decor_elem_right_red.png);
+}*/
+
+.decoration-title {
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    background-position: -0.5% center, 100% center;
+    background-size: 30px;
+    background-repeat: no-repeat;
 }

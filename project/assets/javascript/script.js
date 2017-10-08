@@ -58,22 +58,36 @@ $(function () {
             $("a").click(function (e) {
                 $("#products").empty();
                 var idClicked = e.target.id;
-                
-                function newChoose (element, on) {
+
+                function newChoose(element, on) {
                     $(on).popover({
                         title: "<img width='80%' height='40%' src='" + element.image + "'>",
                         content: "<div id='pr'><h2>" + element.name + "</h2>" +
-                        "<h3>TOPPINGS</h3><p>"+element.description+"</p>"+
+                        "<h3>TOPPINGS</h3><p>" + element.description + "</p>" +
                         "<h3 >Price:" + element.price + "</h3>" +
                         " <button type='submit' class='add-product-to-basket btn btn-success'>Add</button> </div>",
                         html: true,
                         placement: "right"
                     });
-                    
+
                     $(on).on('shown.bs.popover', function () {
-                        $(this).closest('.menu-items').find('.add-product-to-basket').click(function() {
-                             $("#products").hide();
+                        $(this).closest('.menu-items').find('.add-product-to-basket').click(function () {
+                            var count = 1;
+                            $("#products").hide();
                             $('#cartContainer').show();
+                            $('#row').append('<td><img width="100px" height="100px" src="' + element.image +
+                                '"></td><td>' + element.name + '</td>' +
+                                '<td><button id="less"> <img width="20px" height="20px" src="assets/images/minus.png" alt=""></button>' +
+                                '<p>' + count + '</p>' +
+                                '<button id="more"><img width="20px" height="20px" src="assets/images/plus.png" alt=""></button></td>' +
+                                '<td>' + element.price + '</td>');
+                            $('#more').on('click', function () {
+                                $("p").text(++count);
+                            });
+                            $('#less').on('click', function () {
+                                if (count >= 1)
+                                    $("p").text("" + (--count));
+                            });
                         });
                     });
 
@@ -85,15 +99,15 @@ $(function () {
 
                     menuItems.forEach(function (element) {
                         html += "<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
-                        "<h3 class='menuCenter'>Price:" + element.price + "</h3> <button data-id='" + element.id + "' class='open-additional-menu btn btn-success btn-md'>Choose</button></div>"; 
+                            "<h3 class='menuCenter'>Price:" + element.price + "</h3> <button data-id='" + element.id + "' class='open-additional-menu btn btn-success btn-md'>Choose</button></div>";
                     });
-                    
+
                     $("#products").html(html);
-                
-                    $('.open-additional-menu').click(function() {
+
+                    $('.open-additional-menu').click(function () {
                         var itemNumber = $(this).data('id');
 
-                        newChoose(menuItems[itemNumber-1], this);
+                        newChoose(menuItems[itemNumber - 1], this);
                     });
                 }
                 if (idClicked == "dealTab") {
@@ -103,13 +117,13 @@ $(function () {
                     listMenu(data.pizzas);
                 }
                 if (idClicked == "chickenTab") {
-                     listMenu(data.chicken);
+                    listMenu(data.chicken);
                 }
                 if (idClicked == "pastaTab") {
-                     listMenu(data.pasta);
+                    listMenu(data.pasta);
                 }
                 if (idClicked == "sandwichTab") {
-                     listMenu(data.sandwiches);
+                    listMenu(data.sandwiches);
                 }
                 if (idClicked == "sauceTab") {
                     listMenu(data.sauces);

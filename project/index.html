@@ -124,7 +124,7 @@
 
     <div id='cartContainer'>
         <div id='order'>
-            <h2>ORDER CONFIRMATION</h2>
+            <h2 class="decoration-title red-decoration-title center-block margin-bottom-25">ORDER CONFIRMATION</h2>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -136,18 +136,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id= 'row'>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <button class="btn btn-default"> Back to menu</button>
+            <button class="btn btn-success"> Back to menu</button>
         </div>
         <div id='discount'>
-            <h2>YOUR COUPONS</h2>
+            <h2 class="decoration-title red-decoration-title center-block margin-bottom-25">YOUR COUPONS</h2>
+            <label for="discount">Insert your coupon's number:</label>
+            <input type="text">
+            <button type='submit' class='discount btn btn-success'>Add</button>
         </div>
         <div id='delivery'>
-            <h2>DELIVERY DETAILS</h2>
+            <h2 class="decoration-title red-decoration-title center-block margin-bottom-25">DELIVERY DETAILS</h2>
         </div>
     </div>
 
