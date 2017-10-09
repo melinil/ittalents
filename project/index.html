@@ -19,13 +19,16 @@
     <header id="header">
         <div id="header_content">
             <img src="assets/images/logo2.png" alt="logo for pizza website" id="logo">
-            <img src="assets/images/phone.png" alt="phone icon" id="phone">
-            <a href="#pizzas" id="menuButton" class="btn btn-default nav_button">Menu</a>
-            <img id="cart" src="assets/images/cart.png" alt="">
-            <a href="#accountInfo" id="infoButton" class="btn btn-primary nav_button">Acoount info</a>
-            <a href="login.php" class="btn btn-primary nav_button" id="loginButton">Log In</a>
-            <a href="register.php" class="btn btn-primary nav_button" id="registerButton">Register</a>
-            <span>0700125</span>
+            <ul>
+            <li><img src="assets/images/phone.png" alt="phone icon" id="phone"></li>
+            <li><a href="#pizzas" id="menuButton" class="btn btn-default nav_button">Menu</a></li>
+            <li><img id="cart" src="assets/images/cart.png" alt=""></li>
+            <li><div id="numberOfProducts"><p>0</p></div></li>
+            <li><a href="#accountInfo" id="infoButton" class="btn btn-primary nav_button">Acoount info</a></li>
+            <li><a href="login.html" class="btn btn-primary nav_button" id="loginButton">Log In</a></li>
+            <li><a href="#registration" class="btn btn-primary nav_button" id="registerButton">Register</a></li>
+            <li><span>0700125</span></li>
+            </ul>
         </div>
     </header>
     <div id="spaceB"></div>
@@ -39,10 +42,36 @@
             <li><a href="#sandwiches" id='sandwichTab'>SANDWICHES</a></li>
             <li><a href="#sauces" id='sauceTab'>SAUCES</a></li>
             <li><a href="#deserts" id='desertTab'>DESERTS</a></li>
-            <li><a href="#drinks" id='drinkTab'>DRINKS</a></li>
+            <li><a href="#drinks" id='drinkTab'>DRINKS</a>
         </ul>
 
     </nav>
+
+     <div id="registration">
+		<h2>Signup</h2>
+		<form class="signup-form" method="POST">
+        <label for="Firstname">First name:</label>
+			<input id='fname' type="text" name="first">
+            <label for="Lastname">Last name:</label>
+			<input id='lname' type="text" name="last" >
+            <label for="E-mail">E-mail:</label>
+			<input id='email' type="text" name="email" >
+            <label for="Username">Username:</label>
+			<input id='username' type="text" name="uid" >
+            <label for="Password">Password:</label>
+			<input id='pass' type="password" name="pwd">
+			<button id="signup" type="submit" name="submit" class="btn btn-default">Sign up</button>
+		</form>
+</div>
+
+<div id="login">
+        <h1>Login</h1>
+		    <form class="login-form" method="POST">
+			    <input type="text" name="uid" placeholder="Username">
+			    <input type="password" name="pwd" placeholder="Password">
+			    <button type="submit" name="submit" class="btn btn-default">Log in</button>
+            </form>
+    </div>
 
     <div class="pages" id="homePage">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -135,13 +164,11 @@
                             <th>PRICE</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr id= 'row'>
-                        </tr>
+                    <tbody id= 'row'>
                     </tbody>
                 </table>
             </div>
-            <button class="btn btn-success"> Back to menu</button>
+            <a href='#menu' id="backToMenu" class="btn btn-success"> Back to menu</a>
         </div>
         <div id='discount'>
             <h2 class="decoration-title red-decoration-title center-block margin-bottom-25">YOUR COUPONS</h2>
@@ -168,7 +195,7 @@
             </div>
         </div>
     </div>
-
+    
 
     <div id="accountInfo" class="pages">
         <form action="" id="regForm">

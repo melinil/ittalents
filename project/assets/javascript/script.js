@@ -12,13 +12,16 @@ function myMap() {
     map.setMapTypeId("roadmap");
 }
 $(function () {
+    id = 1;
+    users = [];
     $("a").click(function (e) {
         var idClicked = e.target.id;
         if (idClicked == 'loginButton') {
             $('#myModal').modal('toggle');
         }
         if (idClicked == 'registerButton') {
-            $('#myModal2').modal('toggle');
+            $('#registration').show();
+            $(".pages").hide();
         }
         if (idClicked == 'menuButton') {
             $("nav").show();
@@ -71,22 +74,28 @@ $(function () {
                     });
 
                     $(on).on('shown.bs.popover', function () {
-                        $(this).closest('.menu-items').find('.add-product-to-basket').click(function () {
+                        $(this).closest('.menu-items').find('.add-product-to-basket').on("click", function () {
                             var count = 1;
                             $("#products").hide();
+                            $("#navigationBar").hide();
                             $('#cartContainer').show();
-                            $('#row').append('<td><img width="100px" height="100px" src="' + element.image +
+                            $('#row').append(' <tr><td><img width="100px" height="100px" src="' + element.image +
                                 '"></td><td>' + element.name + '</td>' +
                                 '<td><button id="less"> <img width="20px" height="20px" src="assets/images/minus.png" alt=""></button>' +
                                 '<p>' + count + '</p>' +
                                 '<button id="more"><img width="20px" height="20px" src="assets/images/plus.png" alt=""></button></td>' +
-                                '<td>' + element.price + '</td>');
+                                '<td>' + element.price + '</td>' +
+                                '<td><button id="deleteCross"><img width="50px" height="50px" src="assets/images/delete_cross.png" alt=""></button></td></tr>');
                             $('#more').on('click', function () {
                                 $("p").text(++count);
                             });
                             $('#less').on('click', function () {
                                 if (count >= 1)
                                     $("p").text("" + (--count));
+                            });
+                            $("#numberOfProducts>p").text(count);
+                            $("#deleteCross").on('click', function () {
+                                $($(this).closest("tr"));
                             });
                         });
                     });
@@ -114,6 +123,12 @@ $(function () {
                     listMenu(data.deals);
                 }
                 if ((idClicked == "pizzaTab") || (idClicked == "menuButton")) {
+                    listMenu(data.pizzas);
+                }
+                if (idClicked == "backToMenu") {
+                    $("#products").show();
+                    $("#cartContainer").hide();
+                    $("#navigationBar").show();
                     listMenu(data.pizzas);
                 }
                 if (idClicked == "chickenTab") {
@@ -146,6 +161,29 @@ $(function () {
 
         window.location.href = 'index.html';
     });
+
+    $("#signup").on("click", function () {
+        var fname = $("#fname").val();
+        var lname = $("#lname").val();
+        var email = $("#email").val();
+        var username = $("#username").val();
+        var pass = $("#pass").val();
+        if (localStorage.getItem('users') != null)
+            users = JSON.parse(localStorage.getItem('users'));
+        else {
+            users = [{ firstName: "default", lastName: "default", email: "default@abv.bg", username: "default", password: "default" }];
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+        if (!(users.some(user => user.username === username))) {
+            users.push({ firstName: fname, lastName: lname, email: email, username: username, password: pass });
+            localStorage.setItem('users', JSON.stringify(users));
+            alert("Your registration is successful!");
+            window.location.href = 'index.html';
+        } else {
+            alert("This username is not free!");
+        }
+    });
+
 
 });
 

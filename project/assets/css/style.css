@@ -9,6 +9,26 @@
         float: right;
     }
 
+    #registration{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+        display: none;
+        border: 1px solid #898989;
+    }
+    #registration > input{
+        display: block;
+        padding: 10px;
+        margin-left: 10px;
+        float: right;
+    }
+    #registration > label{
+        display: block;
+        padding: 10px;
+        margin-left: 10px;
+        float: right;
+    }
+
     #table td th {
         border: 1px solid black !important;
     }
@@ -329,7 +349,12 @@ FFF8F0
     float: left;
 }
 
-#order > button{
+#order > а{
+    float: left;
+}
+
+#order > p{
+    width: 5px !important;
     float: left;
 }
 
@@ -361,4 +386,28 @@ FFF8F0
     background-position: -0.5% center, 100% center;
     background-size: 30px;
     background-repeat: no-repeat;
+}
+
+#numberOfProducts{
+    position: absolute;
+    left: 92.7%;
+    top: 2px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 21px;
+    background-color: #609e29;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    border: 2px solid #fff;
+    font-weight: bold;
+}
+#numberOfProducts >p{
+    width: 5px;
+    margin: auto;
+}
+
+#login{
+    display: none;
 }
