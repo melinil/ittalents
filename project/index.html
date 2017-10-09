@@ -25,7 +25,7 @@
             <li><img id="cart" src="assets/images/cart.png" alt=""></li>
             <li><div id="numberOfProducts"><p>0</p></div></li>
             <li><a href="#accountInfo" id="infoButton" class="btn btn-primary nav_button">Acoount info</a></li>
-            <li><a href="login.html" class="btn btn-primary nav_button" id="loginButton">Log In</a></li>
+            <li><a href="#login" class="btn btn-primary nav_button" id="loginButton">Log In</a></li>
             <li><a href="#registration" class="btn btn-primary nav_button" id="registerButton">Register</a></li>
             <li><span>0700125</span></li>
             </ul>
@@ -42,7 +42,9 @@
             <li><a href="#sandwiches" id='sandwichTab'>SANDWICHES</a></li>
             <li><a href="#sauces" id='sauceTab'>SAUCES</a></li>
             <li><a href="#deserts" id='desertTab'>DESERTS</a></li>
-            <li><a href="#drinks" id='drinkTab'>DRINKS</a>
+            <li><a href="#drinks" id='drinkTab'>DRINKS</a></li>
+            <div id="checkLi"><br><br><input type="checkbox" name="spicy" value="true" id="spicy"> Spicy
+                <input type="checkbox" name="veg" value="true" id="veg"> Vegeterian</div>
         </ul>
 
     </nav>
@@ -50,7 +52,7 @@
      <div id="registration">
 		<h2>Signup</h2>
 		<form class="signup-form" method="POST">
-        <label for="Firstname">First name:</label>
+            <label for="Firstname">First name:</label>
 			<input id='fname' type="text" name="first">
             <label for="Lastname">Last name:</label>
 			<input id='lname' type="text" name="last" >
@@ -64,13 +66,19 @@
 		</form>
 </div>
 
-<div id="login">
-        <h1>Login</h1>
-		    <form class="login-form" method="POST">
-			    <input type="text" name="uid" placeholder="Username">
-			    <input type="password" name="pwd" placeholder="Password">
-			    <button type="submit" name="submit" class="btn btn-default">Log in</button>
-            </form>
+<div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="login">
+                <form id="regForm">
+                    <h1>Log In</h1>
+                    <label for="username">Username:</label>
+                    <input id="logname" type="text" class="input-fields semi-squere" id="email">
+                    <label for="pwd">Password:</label>
+                    <input id='logpass' type="password" class="input-fields semi-squere" id="pwd">
+                    <button id="log" type="submit" class="btn btn-default">Log In</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="pages" id="homePage">
@@ -164,7 +172,7 @@
                             <th>PRICE</th>
                         </tr>
                     </thead>
-                    <tbody id= 'row'>
+                    <tbody id='row'>
                     </tbody>
                 </table>
             </div>

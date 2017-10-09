@@ -18,6 +18,9 @@ $(function () {
         var idClicked = e.target.id;
         if (idClicked == 'loginButton') {
             $('#myModal').modal('toggle');
+            $("#log").on("click", function () {
+                login();
+            })
         }
         if (idClicked == 'registerButton') {
             $('#registration').show();
@@ -50,6 +53,21 @@ $(function () {
             $("#accountInfo").show();
         }
     });
+    function login() {
+        var username = $("#logname").val();
+        var pass = $("#logpass").val();
+        users = JSON.parse(localStorage.getItem('users'));
+        if (users.some(user => user.username === username &&
+            user.password === pass)) {
+            alert("Successful login!")
+            $("#registerButton").hide();
+            $('#infoButton').show();
+            $('#loginButton').hide();
+            $('#myModal').modal('toggle');
+        } else {
+            alert("Invalid username or password")
+        }
+    }
     $.ajax({
         type: "POST",
         url: "products.json",
@@ -64,7 +82,7 @@ $(function () {
 
                 function newChoose(element, on) {
                     $(on).popover({
-                        title: "<img width='80%' height='40%' src='" + element.image + "'>",
+                        title: "<img width='60%' height='30%' src='" + element.image + "'>",
                         content: "<div id='pr'><h2>" + element.name + "</h2>" +
                         "<h3>TOPPINGS</h3><p>" + element.description + "</p>" +
                         "<h3 >Price:" + element.price + "</h3>" +
@@ -81,21 +99,24 @@ $(function () {
                             $('#cartContainer').show();
                             $('#row').append(' <tr><td><img width="100px" height="100px" src="' + element.image +
                                 '"></td><td>' + element.name + '</td>' +
-                                '<td><button id="less"> <img width="20px" height="20px" src="assets/images/minus.png" alt=""></button>' +
-                                '<p>' + count + '</p>' +
-                                '<button id="more"><img width="20px" height="20px" src="assets/images/plus.png" alt=""></button></td>' +
+                                '<td><button class="less count-btn"> <img width="20px" height="20px" src="assets/images/minus.png" alt=""></button>' +
+                                '<span class="moreLess count-btn">' + count + '</span>' +
+                                '<button class="more count-btn"><img width="20px" height="20px" src="assets/images/plus.png" alt=""></button></td>' +
                                 '<td>' + element.price + '</td>' +
-                                '<td><button id="deleteCross"><img width="50px" height="50px" src="assets/images/delete_cross.png" alt=""></button></td></tr>');
-                            $('#more').on('click', function () {
-                                $("p").text(++count);
+                                '<td><button id="deleteCross" class="test"><img width="20px" height="20px" src="assets/images/delete_cross.png" alt=""></button></td></tr>');
+                            $('.more').on('click', function () {
+                                $(this).closest('td').find('.moreLess').html(++count);
                             });
-                            $('#less').on('click', function () {
+                            $('.less').on('click', function () {
                                 if (count >= 1)
-                                    $("p").text("" + (--count));
+                                    $(this).closest('td').find('.moreLess').html(--count);
                             });
-                            $("#numberOfProducts>p").text(count);
-                            $("#deleteCross").on('click', function () {
-                                $($(this).closest("tr"));
+                            var c = $('#row tr').length;
+                            $("#numberOfProducts>p").text(c);
+                            $(".test").on('click', function () {
+                                $(this).closest("tr").remove();
+                                c = $('#row tr').length;
+                                $("#numberOfProducts>p").text(c);
                             });
                         });
                     });
@@ -107,7 +128,7 @@ $(function () {
                     var html = '';
 
                     menuItems.forEach(function (element) {
-                        html += "<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
+                        html += "<div class='menu-items " + element.spicy + " " + element.veg + "'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
                             "<h3 class='menuCenter'>Price:" + element.price + "</h3> <button data-id='" + element.id + "' class='open-additional-menu btn btn-success btn-md'>Choose</button></div>";
                     });
 
@@ -153,6 +174,26 @@ $(function () {
                     console.log("Hello!")
                 }
             });
+        }
+    });
+
+
+
+
+    $('#spicy').on('click', function () {
+
+        if ($('#spicy').is(":checked")) {
+            $('.false').hide();
+        } else {
+            $('.false').show();
+        }
+    });
+
+    $('#veg').on('click', function () {
+        if ($('#veg').is(":checked")) {
+            $('.noVeg').hide();
+        } else {
+            $('.noVeg').show();
         }
     });
 
