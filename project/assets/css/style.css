@@ -344,15 +344,6 @@ FFF8F0
     margin: 10px;
 }
 
-/*div > h2{
-    font-family:Palatino Linotype;
-    color: #0A67A3;
-}*/
-
-/*.red-decoration-title {
-    background-image: url(assets/images/decor_elem_left_red.png), url(assets/images/decor_elem_right_red.png);
-}*/
-
 .decoration-title {
     font-size: 20px;
     line-height: 35px;
@@ -362,3 +353,12 @@ FFF8F0
     background-size: 30px;
     background-repeat: no-repeat;
 }
+#checkLi{
+    margin-left: 1em;
+    margin-top: 1em;
+    font-size: 1.2em;
+    padding-bottom: 0.9em;
+}
+#moreLess{
+    max-width:1em;
+}   

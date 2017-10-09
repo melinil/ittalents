@@ -28,42 +28,54 @@
             "name": "American Hot",
             "price": 12,
             "description": "FOrget italian and go for a hot-hot american goodness.",
-            "image": "assets/images/americanHotSmall.png"
+            "image": "assets/images/americanHotSmall.png",
+            "spicy":"true",
+            "veg":"noVeg"
         },
          {
             "id": 2,
             "name": "BBQ",
             "price": 13,
             "description": "Ribs or pizza- pizza or ribs? Why not both?",
-            "image": "assets/images/BBQSmall.png"
+            "image": "assets/images/BBQSmall.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
          {
             "id": 3,
             "name": "Garden",
             "price": 10,
             "description": "Not really into the meaty stuff? Got you govered",
-            "image": "assets/images/gardenSmall.png"
+            "image": "assets/images/gardenSmall.png",
+            "spicy":"true",
+            "veg":""
         },
         {
             "id": 4,
             "name": "Margarita",
             "price": 11,
             "description": "Sometimes simple is better.",
-            "image": "assets/images/margaritaSmall.png"
+            "image": "assets/images/margaritaSmall.png",
+            "spicy":"false",
+            "veg":""
         },
         {
             "id": 5,
             "name": "New York",
             "price": 15,
             "description": "Life in the big apple might be fast, but you can chill with some pizza.",
-            "image": "assets/images/ntSmall.png"
+            "image": "assets/images/ntSmall.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
         {
             "id": 6,
             "name": "Peperoni",
             "price": 14,
             "description": "Spicy classic with some peperoni and weet tomato sauce.",
-            "image": "assets/images/peperoniSmall.png"
+            "image": "assets/images/peperoniSmall.png",
+            "spicy":"true",
+            "veg":"noVeg"
         }
     ],
     "sandwiches": [
@@ -72,21 +84,27 @@
             "name": "BBQ",
             "price": 6,
             "description": "Hot and sweet meaty goodness.",
-            "image": "assets/images/bbqS.png"
+            "image": "assets/images/bbqS.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
          {
             "id": 2,
             "name": "Mediter",
             "price": 5,
             "description": "Greek atmosphere with some olives, letuces and meditterenian spices.",
-            "image": "assets/images/mediterS.png"
+            "image": "assets/images/mediterS.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
          {
             "id": 3,
             "name": "Peperoni",
             "price": 5,
             "description": "The sandwich that will make you feel like home.",
-            "image": "assets/images/peperoniS.png"
+            "image": "assets/images/peperoniS.png",
+            "spicy":"true",
+            "veg":"noVeg"
         }
     ],
     "chicken": [
@@ -95,28 +113,36 @@
             "name": "Buffalo",
             "price": 9,
             "description": "Old Bill decided to share his secret for the best chicken in the whole wild west.",
-            "image": "assets/images/buffalo.png"
+            "image": "assets/images/buffalo.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
          {
             "id": 2,
             "name": "Spicy Buffalo",
             "price": 10,
             "description": "With old Bill's permision we spiced up a bit the secret.",
-            "image": "assets/images/buffaloSp.png"
+            "image": "assets/images/buffaloSp.png",
+            "spicy":"true",
+            "veg":"noVeg"
         },
          {
             "id": 3,
             "name": "Kickers",
             "price": 8,
             "description": "Kick your senses with our chicken golden nuggets",
-            "image": "assets/images/lkickers.png"
+            "image": "assets/images/lkickers.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
         {
             "id": 8,
             "name": "Strippers",
             "price": 11,
             "description": "We don't talk about that...",
-            "image": "assets/images/stripper.png"
+            "image": "assets/images/stripper.png",
+            "spicy":"true",
+            "veg":"noVeg"
         }
     ],
     "pasta": [
@@ -125,21 +151,27 @@
             "name": "Carbonara",
             "price": 7,
             "description": "The secret is in the white sauce",
-            "image": "assets/images/carbonaraP.png"
+            "image": "assets/images/carbonaraP.png",
+            "spicy":"true",
+            "veg":"noVeg"
         },
          {
             "id": 2,
             "name": "Napolitana",
             "price": 8,
             "description": "I have no idea, but is good, trust me",
-            "image": "assets/images/napolitanaP.png"
+            "image": "assets/images/napolitanaP.png",
+            "spicy":"false",
+            "veg":"noVeg"
         },
          {
             "id": 3,
             "name": "Peperoni",
             "price": 6,
             "description": "Just the way mom used to make it.",
-            "image": "assets/images/peperoniP.png"
+            "image": "assets/images/peperoniP.png",
+            "spicy":"true",
+            "veg":"noVeg"
         }
     ],
     "sauces": [
@@ -148,28 +180,36 @@
             "name": "honey",
             "price": 1,
             "description": "Buzz- buzz",
-            "image": "assets/images/honey.png"
+            "image": "assets/images/honey.png",
+            "spicy":"false",
+            "veg":""
         },
          {
             "id": 2,
             "name": "garlic",
             "price": 1,
             "description": "Fresh out of the garden",
-            "image": "assets/images/garlic.png"
+            "image": "assets/images/garlic.png",
+            "spicy":"true",
+            "veg":""
         },
          {
             "id": 3,
             "name": "BBQ",
             "price": 1,
             "description": "ust try it",
-            "image": "assets/images/bbq.png"
+            "image": "assets/images/bbq.png",
+            "spicy":"false",
+            "veg":""
         },
         {
             "id": 4,
             "name": "Chilli",
             "price": 1,
             "description": "Would you like to spice things a bit?",
-            "image": "assets/images/chilli.png"
+            "image": "assets/images/chilli.png",
+            "spicy":"true",
+            "veg":""
         }
     ],
     "deserts": [

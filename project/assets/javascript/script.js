@@ -78,15 +78,15 @@ $(function () {
                             $('#row').append('<td><img width="100px" height="100px" src="' + element.image +
                                 '"></td><td>' + element.name + '</td>' +
                                 '<td><button id="less"> <img width="20px" height="20px" src="assets/images/minus.png" alt=""></button>' +
-                                '<p>' + count + '</p>' +
+                                '<span id="moreLess">' + count + '</span>' +
                                 '<button id="more"><img width="20px" height="20px" src="assets/images/plus.png" alt=""></button></td>' +
                                 '<td>' + element.price + '</td>');
                             $('#more').on('click', function () {
-                                $("p").text(++count);
+                                $("#moreLess").text(++count);
                             });
                             $('#less').on('click', function () {
                                 if (count >= 1)
-                                    $("p").text("" + (--count));
+                                    $("#moreLess").text("" + (--count));
                             });
                         });
                     });
@@ -98,7 +98,7 @@ $(function () {
                     var html = '';
 
                     menuItems.forEach(function (element) {
-                        html += "<div class='menu-items'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
+                        html += "<div class='menu-items "+element.spicy+" "+element.veg+"'><img width='80%' height='40%' class='menuCenter' src='" + element.image + "'><h2 class='menuCenter'>" + element.name + "</h2>" +
                             "<h3 class='menuCenter'>Price:" + element.price + "</h3> <button data-id='" + element.id + "' class='open-additional-menu btn btn-success btn-md'>Choose</button></div>";
                     });
 
@@ -138,6 +138,26 @@ $(function () {
                     console.log("Hello!")
                 }
             });
+        }
+    });
+
+
+
+
+    $('#spicy').on('click', function () {
+
+        if ($('#spicy').is(":checked")) {
+            $('.false').hide();
+        } else {
+            $('.false').show();
+        }
+    });
+
+    $('#veg').on('click', function () {
+        if ($('#veg').is(":checked")) {
+            $('.noVeg').hide();
+        } else {
+            $('.noVeg').show();
         }
     });
 
